@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <script src="swal.js"></script>
+		
+		
+		<link type="text/css" rel="stylesheet" href="mystyle.css">
+
+        <script>
+function fe() {
+  /* Get the text field */
+  
+
+  /* Select the text field */
+ 
+/*For mobile devices*/
+
+  /* Copy the text inside the text field */
+
+
+  /* Alert the copied text */
+
+
+.
+</script>
+
+<!--        <link href="Style.css" type="text/css" rel="stylesheet">-->
+            
+
+    </head>
+    <body onload="m();">
+        <span class="info">Program</span><br>
+
+<div class="hi" id="mi"> 
+
+
+num = int(input("Enter a number: "))<br/>
+if (num % 2) == 0: print("{0} is Even".format(num))<br>
+else: print("{0} is Odd".format(num))
+<br>
+</div>
+
+<button class="button click" onclick="copyElementText()">Copy Code</button><br/>
+
+<script>
+function m(){alert(123);}
+function copyElementText() {
+    var text = document.getElementById("mi").innerText;
+    var elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = text;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+	//alert("copied ");
+
+    swal("Copied", "", "success");
+
+}
+</script>
+<b>output</b>
+<br/><div class="hi" > 
+Enter a number: 43 <br/>
+43 is Odd
+</div>
+</body>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>
+
+</html>

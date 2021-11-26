@@ -1,0 +1,43 @@
+<html>
+    
+    <title>rasing Exception</title>
+    <h1>raising exception</h1>
+You can raise exceptions using the raise statement by providing the name of the error/exception and the exception object that is to be thrown.<br/>
+<br/>
+The error or exception that you can raise should be a class which directly or indirectly must be a derived class of the Exception class.<br/>
+<br/>
+<b>Example</b> (save as exceptions_raise.py ):<br/>
+<i>class ShortInputException(Exception):<br/>
+&nbsp;&nbsp;'''A user-defined exception class.'''<br/>
+&nbsp;&nbsp;def __init__(self, length, atleast):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Exception.__init__(self)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;self.length = length<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;self.atleast = atleast<br/>
+<br/>
+try:<br/>
+&nbsp;&nbsp;text = input('Enter something --> ')<br/>
+&nbsp;&nbsp;if len(text) < 3:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;raise ShortInputException(len(text), 3)<br/>
+&nbsp;&nbsp;# Other work can continue as usual here<br/>
+except EOFError:<br/>
+&nbsp;&nbsp;print('Why did you do an EOF on me?')<br/>
+except ShortInputException as ex:<br/>
+&nbsp;&nbsp;print(('ShortInputException: The input was ' +<br/>
+&nbsp;&nbsp;'{0} long, expected at least {1}')<br/>
+&nbsp;&nbsp;.format(ex.length, ex.atleast))<br/>
+else:<br/>
+&nbsp;&nbsp;print('No exception was raised.')</i><br/>
+<br/>
+<b>Output:</b><br/>
+$ python exceptions_raise.py<br/>
+Enter something --> a<br/>
+ShortInputException: The input was 1 long, expected at least 3<br/>
+<br/>
+$ python exceptions_raise.py<br/>
+Enter something --> abc<br/>
+No exception was raised.<br/>
+<br/>
+<b>How It Works</b><br/>
+Here, we are creating our own exception type. This new exception type is called ShortInputException . It has two fields - length which is the length of the given input, and atleast which is the minimum length that the program was expecting.<br/>
+<br/>
+In the except clause, we mention the class of error which will be stored as the variable name to hold the corresponding error/exception object. This is analogous to parameters and arguments in a function call. Within this particular except clause, we use the length and atleast fields of the exception object to print an appropriate message to the user.</html>

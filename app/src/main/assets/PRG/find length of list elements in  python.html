@@ -1,0 +1,73 @@
+<html>
+    <head>
+<script src="swal.js"></script>
+    <link type="text/css" rel="stylesheet" href="mystyle.css">
+
+        
+        
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        
+        <style>//div{ word-wrap: break-word;white-space: pre-line;border:2px solid red;} p{ border:2px solid red; }</style></head>
+<body><span class="info">Program</span><br>
+
+<div class="hi" id="mi"> 
+# Python code to demonstrate 
+# length of list 
+# using naive method 
+
+# Initializing list 
+test_list = [ 1, 4, 5, 7, 8 ] 
+
+# Printing test_list 
+print ("The list is : " + str(test_list)) 
+
+# Finding length of list 
+# using loop 
+# Initializing counter 
+counter = 0
+for i in test_list: 
+	
+	# incrementing counter 
+	counter = counter + 1
+
+# Printing length of list 
+print ("Length of list using naive method is : " + str(counter)) 
+ </div> 
+<button class="button click" onclick="copyElementText()">Copy Code</button><br/>
+
+<script>
+function copyElementText() {
+    var text = document.getElementById("mi").innerText;
+    var elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = text;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+swal("Copied", "", "success");
+
+//	alert("copied ");
+}
+</script>
+<b>output</B><br/>
+
+<br/><div class="hi" > 
+The list is : [1, 4, 5, 7, 8]
+Length of list using naive method is : 5<br>
+</div>
+</body>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>
+
+</html>

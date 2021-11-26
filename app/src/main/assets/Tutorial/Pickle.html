@@ -1,0 +1,44 @@
+<html>
+    
+    <title>pickle</title>
+    <h1>Pickel</h1>
+Python provides a standard module called pickle which you can use to store any plain<br/>
+Python object in a file and then get it back later. This is called storing the object persistently.<br/>
+<br/>
+<b>Example</b> (save as io_pickle.py )<br/>
+<br/>
+<i>import pickle<br/>
+# The name of the file where we will store the object<br/>
+shoplistfile = 'shoplist.data'<br/>
+# The list of things to buy<br/>
+shoplist = ['apple', 'mango', 'carrot']<br/>
+# Write to the file<br/>
+f = open(shoplistfile, 'wb')<br/>
+# Dump the object to a file<br/>
+pickle.dump(shoplist, f)<br/>
+f.close()<br/>
+# Destroy the shoplist variable<br/>
+del shoplist<br/>
+# Read back from the storage<br/>
+f = open(shoplistfile, 'rb')<br/>
+# Load the object from the file<br/>
+storedlist = pickle.load(f)<br/>
+print(storedlist)</i><br/>
+<br/>
+<b>Output</b><br/>
+$ python io_pickle.py<br/>
+['apple', 'mango', 'carrot']<br/>
+<br/>
+<b>How It Works</b><br/>
+To store an object in a file, we have to first open the file in write binary mode and then call the dump function of the pickle module. This process is called pickling.<br/>
+<br/>
+Next, we retrieve the object using the load function of the pickle module which returns the object. This process is called unpickling.</html><script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

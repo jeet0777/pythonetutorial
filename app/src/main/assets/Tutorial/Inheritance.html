@@ -1,0 +1,89 @@
+<html>
+    <title>inheritance</title>
+    
+    <h1>inheritance</h1>
+<br/>
+In Inheritance we derive a new class with little or no modification to an preexisting class in parentheses after the new class name. The new class is called derived (or child) class and the one from which it inherits is called the base (or parent) class.<br/>
+<br/>
+<font color="#E91E63"><b>Inheritance Syntax</b></font><br/>
+<i>class BaseClass:<br/>
+&nbsp;&nbsp;Body of base class<br/>
+class DerivedClass(BaseClass):<br/>
+&nbsp;&nbsp;Body of derived class</i><br/>
+<br/>
+The child class inherits the attributes of its parent class, and you can use those attributes as if they were defined in the child class. A child class can also override data members and methods from the parent.<br/>
+<br/>
+<b>Example</b><br/>
+class SchoolMember:<br/>
+&nbsp;&nbsp;'''Represents any school member.'''<br/>
+&nbsp;&nbsp;def __init__(self, name, age):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;self.name = name<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;self.age = age<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print('(Initialized SchoolMember: {})'.format(self.name))<br/>
+<br/>
+&nbsp;&nbsp;def tell(self):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;'''Tell my details.'''<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print('Name:"{}" Age:"{}"'.format(self.name, self.age), end=" ")<br/>
+<br/>
+<br/>
+class Teacher(SchoolMember):<br/>
+&nbsp;&nbsp;'''Represents a teacher.'''<br/>
+&nbsp;&nbsp;def __init__(self, name, age, salary):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;SchoolMember.__init__(self, name, age)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;self.salary = salary<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print('(Initialized Teacher: {})'.format(self.name))<br/>
+<br/>
+&nbsp;&nbsp;def tell(self):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;SchoolMember.tell(self)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print('Salary: "{:d}"'.format(self.salary))<br/>
+<br/>
+<br/>
+class Student(SchoolMember):<br/>
+&nbsp;&nbsp;'''Represents a student.'''<br/>
+&nbsp;&nbsp;def __init__(self, name, age, marks):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;SchoolMember.__init__(self, name, age)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;self.marks = marks<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print('(Initialized Student: {})'.format(self.name))<br/>
+<br/>
+&nbsp;&nbsp;def tell(self):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;SchoolMember.tell(self)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print('Marks: "{:d}"'.format(self.marks))<br/>
+<br/>
+<br/>
+t = Teacher('Mrs. Shrividya', 40, 30000)<br/>
+s = Student('Swaroop', 25, 75)<br/>
+<br/>
+# prints a blank line<br/>
+print()<br/>
+<br/>
+members = [t, s]<br/>
+for member in members:<br/>
+&nbsp;&nbsp;# Works for both Teachers and Students<br/>
+&nbsp;&nbsp;member.tell()<br/>
+<br/>
+<b>Output:</b><br/>
+(Initialized SchoolMember: Mrs. Shrividya)<br/>
+(Initialized Teacher: Mrs. Shrividya)<br/>
+(Initialized SchoolMember: Swaroop)<br/>
+(Initialized Student: Swaroop)<br/>
+<br/>
+Name:"Mrs. Shrividya" Age:"40" Salary: "30000"<br/>
+Name:"Swaroop" Age:"25" Marks: "75"<br/>
+<br/>
+Here we've created a common class called SchoolMember and then have the teacher and student classes inherit from this class, i.e. they will become sub-types of this type (class) and then we can add specific characteristics to these sub-types.<br/>
+<br/>
+There are many advantages to this approach. If we add/change any functionality in SchoolMember , this is automatically reflected in the subtypes as well. For example, you can add a new ID card field for both teachers and students by simply adding it to the SchoolMember class. However, changes in the subtypes do not affect other subtypes.<br/>
+<br/>
+Another advantage is that you can refer to a teacher or student object as a SchoolMember object which could be useful in some situations such as counting of the number of school members. This is called <font color="#E91E63"><b>polymorphism</b></font> where a sub-type can be substituted in any situation where a parent type is expected, i.e. the object can be treated as an instance of the parent class.<br/>
+<br/>
+A note on terminology - if more than one class is listed in the inheritance tuple, then it is called multiple inheritance.<br/></html>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

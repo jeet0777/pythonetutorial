@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundcolor">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingBottom="2dp"
+        android:paddingTop="40dp"
+
+        android:textSize="16sp"
+        android:paddingLeft="20dp"/>
+
+
+  <!--  <TextView
+   i     android:id="@+id/link"
+    m    android:layout_width="match_parent"
+     p   android:layout_height="wrap_content"
+      c  android:ellipsize="end"
+      o  android:maxLines="1"
+        d  android:layout_below="@+id/title"
+        e  android:paddingBottom="4dp"
+         android:paddingTop="2dp"
+         android:textSize="14sp" />
+-->
+</RelativeLayout>

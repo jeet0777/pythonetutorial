@@ -1,0 +1,81 @@
+<html>
+<title>class in python</title>
+<h1>Class</h1>
+<b>
+Classes are a user-defined data type that is used to encapsulate data and associated functions together. It also helps in binding data together into a single unit.<br/>
+<br/>
+We can think of class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows etc. Based on these descriptions we build the house. House is the object.<br/>
+<br/>
+As, many houses can be made from a description, we can create many objects from a class. An object is also called an instance of a class and the process of creating this object is called instantiation.<br/>
+<br/>
+<font color="#E91E63"><b>Defining a Class</b></font><br/>
+A class is created using the class keyword. The fields and methods of the class are listed in an indented block.<br/>
+<br/><hr>
+<i>class Person:<br/>
+&nbsp;&nbsp;pass # An empty block</i><br/>
+<br/><hr>
+We create a new class using the class statement and the name of the class. This is followed by an indented block of statements which form the body of the class. In this case, we have an empty block which is indicated using the pass statement.<br/>
+<br/>
+We will use following code sample to read all class concepts.<br/>
+<br/><hr>
+<i>class Person:<br/>
+&nbsp;&nbsp;'''Common base class for all persons'''<br/>
+&nbsp;&nbsp;pCount = 0<br/>
+<br/>
+&nbsp;&nbsp;def __init__(self, name, age):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;self.name = name<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;self.age = age<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Person.pCount += 1<br/>
+   <br/>
+&nbsp;&nbsp;def displayPerson(self):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print "Name : ", self.name,  ", Age : ", self.age<br/>
+<br/>
+&nbsp;&nbsp;#Access attribute<br/>
+&nbsp;&nbsp;print "Persons :", Person.pCount<br/>
+<br/>
+&nbsp;&nbsp;#Print DocString<br/>
+&nbsp;&nbsp;print "DocString :", Person.__doc__<br/>
+<br/>
+&nbsp;&nbsp;#create first object<br/>
+&nbsp;&nbsp;p1 = Person("Nick", 20)<br/>
+&nbsp;&nbsp;#create second object<br/>
+&nbsp;&nbsp;p2 = Person("Rick", 25)<br/>
+&nbsp;&nbsp;p1.displayPerson()<br/>
+&nbsp;&nbsp;p2.displayPerson()<br/>
+&nbsp;&nbsp;print "Total Persons %d" % Person.pCount</i><br/>
+<br/><hr>
+<b>OUTPUT :</b><br/>
+Persons : 0<br/>
+DocString : Common base class for all persons<br/>
+Name : Nick , Age : 20<br/>
+Name : Rick , Age : 25<br/>
+Total Persons 2<br/>
+<br/><hr>
+<font color="#E91E63"><b>Accessing Attributes</b></font><br/>
+You access the object's attributes using the dot operator with object. Attributes may be data or functions. <br/>
+<i>#Access attribute<br/>
+print (Person.pCount)</i><br/>
+<br/>
+There are also special attributes in it that begins with double underscores (__). For example, as given in above example __doc__ gives us the docstring of that class.<br/>
+<br/>
+<font color="#E91E63"><b>Creating an Object</b></font><br/>
+we create an object/instance of this class using the name of the class followed by a pair of parentheses. <br/>
+&gt;&gt;&gt;ob1 = MyClass()<br/>
+<br/>
+The first argument of the function in class must be the object itself. This is conventionally called self (You must have noticed displayPerson function). It can be named otherwise but we highly recommend to follow the convention.<br/>
+<br/>
+<font color="#E91E63"><b>Constructors</b></font><br/>
+As we know class functions that begins with double underscore (__) are called special functions as they have special meaning.<br/>
+__init__ function is also called constructors in Object Oriented Programming (OOP). We use it to initialize all the variables. __init__ gets called whenever a new object of that class is instantiated.
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>
+
+</html>

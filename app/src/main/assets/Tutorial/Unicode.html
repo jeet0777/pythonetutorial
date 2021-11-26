@@ -1,0 +1,39 @@
+<html>
+    <title>Unicode</title>
+    <h1>unicode</h1>
+So far, when we have been writing and using strings, or reading and writing to a file, we have used simple English characters only. Both English and non-English characters can be represented in Unicode (please see the articles at the end of this section for more info), and Python 3 by default stores string variables (think of all that text we wrote using single or double or triple quotes) in Unicode<br/>
+<br/>
+<b>NOTE:</b> If you are using Python 2, and we want to be able to read and write other nonEnglish languages, we need to use the unicode type, and it all starts with the character u , e.g. u"hello world"<br/>
+<br/>
+<i>>>> "hello world"<br/>
+'hello world'<br/>
+>>> type("hello world")<br/>
+<class 'str'><br/>
+>>> u"hello world"<br/>
+'hello world'<br/>
+>>> type(u"hello world")<br/>
+&lt;class 'str'&gt;</i><br/>
+<br/>
+When data is sent over the Internet, we need to send it in bytes... something your computer easily understands. The rules for translating Unicode (which is what Python uses when it stores a string) to bytes is called encoding. A popular encoding to use is UTF-8. We can read and write in UTF-8 by using a simple keyword argument in our open function.<br/>
+<br/>
+<i># encoding=utf-8<br/>
+import io<br/>
+f = io.open("abc.txt", "wt", encoding="utf-8")<br/>
+f.write(u"Imagine non-English language here")<br/>
+f.close()<br/>
+text = io.open("abc.txt", encoding="utf-8").read()<br/>
+print(text)</i><br/>
+<br/>
+<b>How It Works</b><br/>
+We use io.open and then use the encoding argument in the first open statement to encode the message, and then again in the second open statement when decoding the message. Note that we should only use encoding in the open statement when in text mode.<br/>
+<br/>
+Whenever we write a program that uses Unicode literals (by putting a u before the string) like we have used above, we have to make sure that Python itself is told that our program uses UTF-8, and we have to put # encoding=utf-8 comment at the top of our program.</class></html><script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

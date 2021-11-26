@@ -1,0 +1,53 @@
+<html><title>if statement</title>
+    
+    <h1>if Statement</h1>
+There is no switch statement in python you can use if..elif..else statement to do the same thing. <br/>
+<br/>
+<b>Syntax:</b><br/>
+<i>if expression:<br/>
+&nbsp;&nbsp;Statements<br/>
+else:<br/>
+&nbsp;&nbsp;Statements</i><br/>
+<br/>
+If statement work as follows:<br/>
+If the expression is true, it will run the block of statement(if block).<br/>
+Otherwise it will run another block of statement(else block)<br/>
+<br/>
+Python uses indentation levels to know which statements belongs to which block. If statement contains a colon at the end to indicate python that a block of statements follows.<br/>
+<br/>
+<b>Example:</b><br/>
+<i>if x&lt;0:<br/>
+&nbsp;&nbsp;print “x is Negative”<br/>
+else:<br/>
+&nbsp;&nbsp;Print “x is Positive”</i><br/>
+<br/>
+In given example, if x is less than 0 then it will run if block and print x is Negative.<br/>
+Otherwise it will run the else block and print x is Positive.<br/>
+<br/>
+We can write if statement in single conditional expression.<br/>
+<b>Syntax:</b><br/>
+expression1 if boolean_expression else expression2<br/>
+<br/>
+If boolean_expression evaluates true, then the result will be expression1 otherwise the result will be expression2.<br/>
+One common programming pattern is to set variable to a default value, and then change the value to if necessary.For example due to request by user or to the account for the platform on which the program is being run. <br/>
+Conventional if statement<br/>
+<br/>
+Offset = 20<br/>
+If not sys.platform.startswith(“win”):<br/>
+&nbsp;&nbsp;Offset = 10<br/>
+<br/>
+The system.platform holds the name of current platform for example “win32” or “linux2”. The same thing can be achieved using following conditional expression<br/>
+<br/>
+Offset = 20 if sys.platform.startswith(“win”) else 10<br/>
+<br/>
+Here In this case there is no need of parenthesis. But parenthesis make things clearer for human readers and to avoid subtle trap.</html>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

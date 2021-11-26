@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity"
+    android:background="?attr/backgroundcolor"
+    >
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+    android:id="@+id/congrats"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:layout_gravity="center"
+    android:src="@drawable/trophy"
+    android:adjustViewBounds="true"
+    android:padding="1dp"
+    android:background="?attr/backgroundcolor"
+    />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="3dp"
+        android:background="#c6c6c6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <TextView
+        android:layout_marginStart="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Questions :"
+            android:textColor="?attr/text_quiz_view"
+           android:textStyle="bold"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="?attr/actionBarSize"
+            android:id="@+id/attempted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/text_quiz_view"
+            android:textSize="24sp" />
+</RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginStart="9dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correct :"
+            android:textColor="?attr/text_quiz_view"
+            android:textStyle="bold"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/correct"
+            android:layout_alignParentEnd="true"
+            android:text=""
+            android:layout_marginEnd="?attr/actionBarSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/text_quiz_view"
+            android:textSize="24sp" />
+</RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/incorrectvg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginStart="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Incorrect :"
+            android:textColor="?attr/text_quiz_view"
+            android:textStyle="bold"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="?attr/actionBarSize"
+            android:text=""
+            android:id="@+id/incorrect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/text_quiz_view"
+            android:textSize="24sp" />
+</RelativeLayout>
+    </LinearLayout>
+<RelativeLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp">
+    <TextView
+        android:layout_marginStart="9dp"
+        android:id="@+id/you"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grade :"
+        android:textColor="?attr/text_quiz_view"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_alignParentStart="false"/>
+
+    <TextView
+        android:id="@+id/Grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:layout_marginEnd="?attr/actionBarSize"
+        android:textColor="?attr/text_quiz_view"
+        android:textSize="24sp" />
+
+</RelativeLayout>
+    <View
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:background="#bebebe" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:id="@+id/ok"
+        android:textColor="?attr/text_quiz_view"
+        android:layout_gravity="center"
+        android:elevation="5dp"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@drawable/rectangle_border"/>
+</LinearLayout>
+  </ScrollView>

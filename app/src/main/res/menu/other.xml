@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="bookmark"
+        android:icon="@drawable/ic_bookmark_border_black_24dp"
+        app:showAsAction="always"
+        android:id="@+id/please"/>
+    <item
+    android:id="@+id/rm"
+    android:title="Reader Mode"
+    app:showAsAction="never"/>
+    <item
+        android:id="@+id/shre"
+        android:title="share"
+        android:icon="@drawable/ic_share"
+        app:showAsAction="never"
+        />
+
+<item android:title="Bookmarks"
+    app:showAsAction="never"
+    android:id="@+id/youshouldwork"/>
+
+
+</menu>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SigninActivity"
+    android:background="?attr/backgroundcolor"    >
+    <RelativeLayout
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:background="@drawable/shape_left_effect">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_center"
+        android:layout_centerVertical="true"
+        android:elevation="50dp"
+        android:layout_margin="40dp"
+        android:layout_marginVertical="?attr/actionBarSize" >
+        <com.google.android.gms.common.SignInButton
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/googlesignin"
+            android:layout_margin="20dp"
+            android:layout_centerVertical="true"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

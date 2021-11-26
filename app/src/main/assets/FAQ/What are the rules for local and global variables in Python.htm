@@ -1,0 +1,42 @@
+<html>
+<head>
+<style type="text/css">
+#q{
+//background-color:white;
+box-shadow:pink 6px 6px;
+border:white solid 3px;
+margin:2px;
+padding:4px;
+}
+#ans{
+//background-color:white;
+box-shadow:pink 6px 6px;
+border:white solid 3px;
+margin:2px;
+padding:4px;
+
+}
+</style>
+</head>
+
+<body>
+<p id="q"><b>2.what are the rules for local and global variables in python</b></p><br>
+<p id="ans">In Python, variables that are only referenced inside a function are implicitly global. If a variable is assigned a value anywhere within the function’s body, it’s assumed to be a local unless explicitly declared as global.
+
+Though a bit surprising at first, a moment’s consideration explains this. On one hand, requiring global for assigned variables provides a bar against unintended side-effects. On the other hand, if global was required for all global references, you’d be using global all the time. You’d have to declare as global every reference to a built-in function or to a component of an imported module. This clutter would defeat the usefulness of the global declaration for identifying side-effects.
+
+</p>
+
+</body>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>
+
+</html>

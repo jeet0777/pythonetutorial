@@ -1,0 +1,56 @@
+Decorators are a shortcut to applying wrapper functions. This is helpful to "wrap" functionality with the same code over and over again. For example, I created a retry decorator for myself that I can just apply to any function and if any exception is thrown during a run, it is retried again, till a maximum of 5 times and with a delay between each retry. This is especially useful for situations where you are trying to make a network call to a remote computer:<br/>
+<br/>
+<i>from time import sleep<br/>
+from functools import wraps<br/>
+import logging<br/>
+logging.basicConfig()<br/>
+log = logging.getLogger("retry")<br/>
+<br/>
+def retry(f):<br/>
+&nbsp;&nbsp;@wraps(f)<br/>
+&nbsp;&nbsp;def wrapper_function(*args, **kwargs):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;MAX_ATTEMPTS = 5<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;for attempt in range(1, MAX_ATTEMPTS + 1):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return f(*args, **kwargs)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log.exception("Attempt %s/%s failed : %s",<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;attempt,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MAX_ATTEMPTS,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(args, kwargs))<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sleep(10 * attempt)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;log.critical("All %s attempts failed : %s",<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MAX_ATTEMPTS,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(args, kwargs))<br/>
+&nbsp;&nbsp;return wrapper_function<br/>
+<br/>
+counter = 0<br/>
+<br/>
+@retry<br/>
+def save_to_database(arg):<br/>
+&nbsp;&nbsp;print("Write to a database or make a network call or etc.")<br/>
+&nbsp;&nbsp;print("This will be automatically retried if exception is thrown.")<br/>
+&nbsp;&nbsp;global counter<br/>
+&nbsp;&nbsp;counter += 1<br/>
+&nbsp;&nbsp;# This will throw an exception in the first call<br/>
+&nbsp;&nbsp;# And will work fine in the second call (i.e. a retry)<br/>
+&nbsp;&nbsp;if counter < 2:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;raise ValueError(arg)<br/>
+<br/>
+if __name__ == '__main__':<br/>
+&nbsp;&nbsp;save_to_database("Some bad value")</i><br/>
+<br/>
+<b>Output:</b><br/>
+$ python more_decorator.py<br/>
+Write to a database or make a network call or etc.<br/>
+This will be automatically retried if exception is thrown.<br/>
+ERROR:retry:Attempt 1/5 failed : (('Some bad value',), {})<br/>
+Traceback (most recent call last):<br/>
+&nbsp;&nbsp;File "more_decorator.py", line 14, in wrapper_function<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;return f(*args, **kwargs)<br/>
+&nbsp;&nbsp;File "more_decorator.py", line 39, in save_to_database<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;raise ValueError(arg)<br/>
+ValueError: Some bad value<br/>
+Write to a database or make a network call or etc.<br/>
+This will be automatically retried if exception is thrown.<br/>

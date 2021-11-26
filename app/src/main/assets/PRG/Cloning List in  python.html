@@ -1,0 +1,62 @@
+<html>
+    <head>
+  <script src="swal.js"></script>  <link type="text/css" rel="stylesheet" href="mystyle.css">
+
+        
+        
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        
+        <style></style></head>
+<body><span class="info">Program</span><br>
+
+<div class="hi" id="mi"> 
+    
+# Python program to copy or clone a list 
+# Using the Slice Operator 
+def Cloning(li1): 
+	li_copy = li1[:] 
+	return li_copy 
+
+# Driver Code 
+li1 = [4, 8, 2, 10, 15, 18] 
+li2 = Cloning(li1) 
+print("Original List:", li1) 
+print("After Cloning:", li2) 
+ </div>
+<button class="button click" onclick="copyElementText()">Copy Code</button>
+<script>
+function copyElementText() {
+    var text = document.getElementById("mi").innerText;
+    var elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = text;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+swal("Copied", "", "success");
+
+//	alert("copied ");
+}
+</script>
+
+<div class="hi" ><br/>
+<b>output</B><br/>
+Original List: [4, 8, 2, 10, 15, 18]
+After Cloning: [4, 8, 2, 10, 15, 18]<br>
+</div>
+</body>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>
+
+</html>

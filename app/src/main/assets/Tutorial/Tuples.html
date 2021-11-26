@@ -1,0 +1,103 @@
+<html>
+    
+    <title>Tuples</title>
+    
+    <h1>tuples</h1>
+Tuples are used to hold together multiple objects. Think of them as similar to lists, but without the extensive functionality that the list class gives you. One major feature of tuples is that they are immutable like strings i.e. you cannot modify tuples and tuples use parentheses, whereas lists use square brackets.<br/>
+<br/>
+Tuples are usually used in cases where a statement or a user-defined function can safely<br/>
+assume that the collection of values (i.e. the tuple of values used) will not change.<br/>
+<br/>
+<font color="#E91E63"><b>Creating tuple</b></font><br/>
+Tuples are defined by specifying items separated by commas within an optional pair of parentheses.<br/>
+<br/>
+<i>tup0 = ();<br/>
+tup1 = ('mango', 'apple', 1997, 20.10);<br/>
+tup2 = (1, 2, 3, 4, 5 );<br/>
+tup3 = "a", "b", "c", "d";</i><br/>
+<br/>
+<font color="#E91E63"><b>Accessing Values in Tuples</b></font><br/>
+We can access the items in the tuple by specifying the item's position within a pair of square brackets just like we did for lists. This is called the <i>indexing operator</i>.<br/>
+<br/>
+<i>tup1 = ('mango', 'apple', 1997, 20.10);<br/>
+print "First item :" , tup1[0];<br/>
+print "last two :", tup[2:4];</i><br/>
+<br/>
+<b>OUTPUT : </b><br/>
+First item : mango<br/>
+last two : (1997, 20.10)<br/>
+<br/>
+Python allows <i>negative indexing</i> for its sequences.<br/>
+The index of -1 refers to the last item, -2 to the second last item and so on.<br/>
+<br/>
+<i>print "Last item :" , tup1[-1];<br/>
+#Output : Last item : 20.10<br/>
+</i><br/>
+<br/>
+<font color="#E91E63"><b>Updating Tuples</b></font><br/>
+Tuples are immutable which means you cannot update or change the values of tuple elements. But, if the element is itself a mutable datatype like list, its nested items can be changed.<br/>
+<br/>
+<i>tup0 = (1, 2, 3, [10, 20])<br/>
+# Following action is not valid for tuples<br/>
+# tup0[0] = 100;<br/>
+# but item of mutable element can be changed<br/>
+my_tuple[3][0] = 9</i><br/>
+<br/>
+<font color="#E91E63"><b>Deleting a Tuple</b></font><br/>
+As we've learned, we cannot change the elements in a tuple. That also means we cannot delete or remove items from a tuple.<br/>
+But deleting a tuple entirely is possible using the keyword del.<br/>
+<br/>
+<br/>
+<i>tup1 = ('mango', 'apple', 1997, 20.10);<br/>
+# Following action is not valid for tuples<br/>
+#del tup1[1];<br/>
+<br/>
+#but entire tuple can be deleted<br/>
+del tup1<br/>
+<br/>
+<font color="#E91E63"><b>Iterating Through a Tuple</b></font><br/>
+Using a for loop we can iterate though each item in a tuple.<br/>
+<i>for name in ('apple','mango','banana'):<br/>
+&nbsp;&nbsp;print("I like",fruit)</i><br/>
+<br/>
+<b>OUTPUT : </b><br/>
+I like apple<br/>
+I like banana<br/>
+I like mango<br/>
+<br/>
+<font color="#E91E63"><b>Built-in Functions with Tuple</b></font><br/>
+<b>all()</b><br/>
+Return True if all elements of the tuple are true (or if the tuple is empty).<br/>
+<br/>
+<b>any()</b><br/>
+Return True if any element of the tuple is true. If the tuple is empty, return False.<br/>
+<br/>
+<b>enumerate()</b><br/>
+Return an enumerate object. It contains the index and value of all the items of tuple as pairs.<br/>
+<br/>
+<b>len()</b><br/>
+Return the length (the number of items) in the tuple.<br/>
+<br/>
+<b>max()</b><br/>
+Return the largest item in the tuple.<br/>
+<br/>
+<b>min()</b><br/>
+Return the smallest item in the tuple<br/>
+<br/>
+<b>sorted()</b><br/>
+Take elements in the tuple and return a new sorted list (does not sort the tuple itself).<br/>
+<br/>
+<b>sum()</b><br/>
+Retrun the sum of all elements in the tuple.<br/>
+<br/>
+<b>tuple()</b><br/>
+Convert an iterable (list, string, set, dictionary) to a tuple.</i></html><script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

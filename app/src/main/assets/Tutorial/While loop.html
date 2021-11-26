@@ -1,0 +1,44 @@
+<html>
+    <title>While statement</title>
+    
+    <h1>While statement</h1>
+Python provides looping with while statement. If you want to execute block of statements repeatedly, depending upon the condition, then you can go for while statement.<br/>
+<br/>
+<b>Syntax:</b><br/>
+<i>while expression:<br/>
+&nbsp;&nbsp;Statement(s)<br/>
+else:<br/>
+&nbsp;&nbsp;Statement(s)</i><br/>
+<br/>
+Python supports else clause with loop.<br/>
+It will execute the block of statement repeatedly as long as the expression is true. Here statement may be a single statement or block of statements.<br/>
+A loop becomes infinite loop if a expression never becomes FALSE. This results in a loop that never ends.<br/>
+<br/>
+The else clause is optional. If it is used with a while loop, the else statement is executed when the expression becomes false.<br/>
+<br/>
+When condition becomes false, the loop terminates and if  else clause is present then it will executes otherwise first statement after the loop will be executed. <br/>
+<br/>
+It can skip else clause in following scenarios:<br/>
+1.If loop is broken out due to some break statement or a return statement(if the loop is in a function or method)<br/>
+2.If exception occurs, python skips the else clause and looks for a suitable exception handler.<br/>
+<br/>
+<br/>
+<b>Example:</b><br/>
+<i>number = 23<br/>
+running = True<br/>
+while running:<br/>
+&nbsp;&nbsp;guess = int(raw_input(“Enter a number”))<br/>
+<br/>
+&nbsp;&nbsp;if guess == number:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print “You guessed right”<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;running = False<br/>
+&nbsp;&nbsp;elif guess < number:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print “It is higher”<br/>
+&nbsp;&nbsp;else:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print “It is smaller” <br/>
+else:<br/>
+&nbsp;&nbsp;print “end of while loop”<br/>
+<br/>
+print “Done”</i><br/>
+<br/>
+In this example, user is allowed to keep guessing repeatedly until he guesses correctly. Here if statement and raw_input() are inside while loop and running variable is set to True initially. Program will check the if running variable is true and then proceeds to execute while-block. After this block is executed, it will again check the condition (running variable is true or not ). If it is true it will again executes while-block otherwise it will executes the optional else block, if present and continue to the next statement.</html>

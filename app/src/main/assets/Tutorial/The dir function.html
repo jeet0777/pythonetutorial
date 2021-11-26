@@ -1,0 +1,41 @@
+<html>
+    
+    <title>the dir()</title>
+    
+    <h1>dir functions</h1>
+Built-in dir() function returns list of names defined by an object. If the object is a module, this list includes functions, classes and variables, defined inside that module.<br/>
+<br/>
+This function can accept arguments. If the argument is the name of the module, function returns list of names from that specified module. If there is no argument, function returns list of names from the current module.<br/>
+<br/>
+Here is a simple example:<br/>
+<i># get names of attributes in math module<br/>
+import math<br/>
+<br/>
+content = dir(math)<br/>
+print content</i><br/>
+<br/>
+<b>Output : </b><br/>
+['__doc__', '__file__', '__name__', 'acos', 'asin', 'atan', 'atan2', 'ceil', 'cos', 'cosh', 'degrees', 'e', 'exp', 'fabs', 'floor', 'fmod', 'frexp', 'hypot', 'ldexp', 'log', 'log10', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh', 'sqrt', 'tan', 'tanh']<br/>
+<br/>
+<br/>
+<br/>
+<i># get names of attributes for current module<br/>
+content = dir()<br/>
+print content</i><br/>
+<br/>
+<b>Output :</b><br/>
+['__builtins__', '__doc__', '__name__', '__package__']<br/>
+<br/>
+<br/>
+Note that the dir() function works on any object. For example, run dir(str) for the attributes of the str (string) class.<br/>
+<br/>
+There is also a vars() function which can potentially give you the attributes and their values, but it will not work for all cases.</html><script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

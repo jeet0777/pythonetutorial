@@ -1,0 +1,39 @@
+<html>
+    
+    <title>pass statement</title>
+    <h1>pass Statement</h1>
+In Python, "pass" statement is use to indicate that nothing happens i. e.  it doesn't result in any Python operations.<br/>
+The pass statement is a null operation; nothing happens when it executes. <br/>
+<br/>
+In Python, the pass statement, is much like a comment but the only difference between a comment and a pass statement is that while a comment is completely ignored by the interpreter, the pass statement is not. <br/>
+<br/>
+That's why you can use a pass statement  where your code will eventually go, but has not been written yet or when a statement is required syntactically but you do not want any command(code) to execute.<br/>
+ <br/>
+Python has the syntactical requirement that code blocks (after if, except, def, class etc.) cannot be empty.<br/>
+<br/>
+Therefore, if nothing is supposed to happen in a code block, a pass is needed for such a block to not produce an IndentationError. Alternatively, any statement (including just a term to be evaluated, like the Ellipsis literal ... or a string, most often a docstring) can be used, but the pass makes clear that indeed nothing is supposed to happen, and does not need to be actually evaluated and (at least temporarily) stored in memory.<br/>
+<br/>
+<b>Example:</b><br/>
+Suppose you are designing a new class with some methods that you don't want to implement, yet.<br/>
+<br/>
+<i>class MyClass(object):<br/>
+&nbsp;&nbsp;&nbsp;def methoda(self):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;def methodb(self):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print "Inside methodB"</i><br/>
+<br/>
+In this example, if Def methoda(self) gets called, do nothing(we have used pass statement). <br/>
+If you would leave out the pass, the code wouldn't run. It will result in an<br/>
+IndentationError: expected an indented block. <br/>
+As stated before, the pass statement does nothing particular but can act as a placeholder.</html>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

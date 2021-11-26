@@ -1,0 +1,15 @@
+Acquiring a resource in the try block and subsequently releasing the resource in the finally block is a common pattern. Hence, there is also a with statement that enables this to be done in a clean manner:<br/>
+<br/>
+<b>Example</b> (Save as exceptions_using_with.py) :<br/>
+<i>with open("poem.txt") as f:<br/>
+&nbsp;&nbsp;for line in f:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print(line, end='')</i><br/>
+<br/>
+<b>How It Works</b><br/>
+The output should be same as the previous example. The difference here is that we are using the open function with the with statement - we leave the closing of the file to be done automatically by with open .<br/>
+<br/>
+What happens behind the scenes is that there is a protocol used by the with statement. It fetches the object returned by the open statement, let's call it "thefile" in this case.<br/>
+<br/>
+It always calls the thefile.__enter__ function before starting the block of code under it and always calls thefile.__exit__ after finishing the block of code.<br/>
+<br/>
+So the code that we would have written in a finally block should be taken care of automatically by the __exit__ method. This is what helps us to avoid having to use explicit try..finally statements repeatedly.

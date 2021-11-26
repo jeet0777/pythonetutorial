@@ -1,0 +1,41 @@
+<html>
+<title>default argument</title>
+<h1>Default Arguments</h1>
+For some functions, you may want to make some parameters optional and use default values in case the user does not want to provide values for them. This is done with the help of default argument values. You can specify default argument values for parameters by appending to the parameter name in the function definition the assignment operator ( = ) followed by the default value.<br/>
+<br/>
+Note that the default argument value should be a constant. More precisely, the default argument value should be immutable. For now, just remember this.<br/>
+<br/>
+<b>Example</b> (save as function_default.py ):<br/><hr>
+<i>def say(message, times=1):<br/>
+&nbsp;&nbsp;print(message * times)<br/>
+<br/>
+say('Hello')<br/>
+say('World', 5)</i><br/>
+<br/><hr>
+<b>Output:</b><br/>
+$ python function_default.py<br/>
+Hello<br/>
+WorldWorldWorldWorldWorld<br/>
+<br/><hr>
+<b>How It Works</b><br/>
+The function named say is used to print a string as many times as specified. If we don't supply a value, then by default, the string is printed just once. We achieve this by specifying a default argument value of 1 to the parameter times .<br/>
+<br/>
+In the first usage of say , we supply only the string and it prints the string once. In the second usage of say , we supply both the string and an argument 5 stating that we wan to say the string message 5 times.<br/>
+<br/>
+<b>CAUTION</b><br/>
+<i>Only those parameters which are at the end of the parameter list can be given default argument values i.e. you cannot have a parameter with a default argument value preceding a parameter without a default argument value in the function's parameter list.<br/>
+This is because the values are assigned to the parameters by position. For example, def func(a, b=5) is valid, but def func(a=5, b) is not valid.</i>
+
+
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>
+
+</html>

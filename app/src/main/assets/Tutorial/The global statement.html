@@ -1,0 +1,40 @@
+<html>
+    
+    <title>global statement</title>
+    
+    <h1>golbal statement</h1>
+If you want to assign a value to a name defined at the top level of the program (i.e. not inside any kind of scope such as functions or classes), then you have to tell Python that the name is not local, but it is global. We do this using the global statement. It is impossible to assign a value to a variable defined outside a function without the global statement.<br/>
+<br/>
+You can use the values of such variables defined outside the function (assuming there is no variable with the same name within the function). However, this is not encouraged and should be avoided since it becomes unclear to the reader of the program as to where that variable's definition is. Using the global statement makes it amply clear that the variable is defined in an outermost block.<br/>
+<br/>
+<b>Example</b> (save as function_global.py ):<br/>
+<i>x = 50<br/>
+<br/>
+def func():<br/>
+&nbsp;&nbsp;global x<br/>
+&nbsp;&nbsp;print('x is', x)<br/>
+&nbsp;&nbsp;x = 2<br/>
+&nbsp;&nbsp;print('Changed global x to', x)<br/>
+<br/>
+func()<br/>
+print('Value of x is', x)</i><br/>
+<br/>
+<b>Output:</b><br/>
+$ python function_global.py<br/>
+x is 50<br/>
+Changed global x to 2<br/>
+Value of x is 2<br/>
+<br/>
+<b>How It Works</b><br/>
+The global statement is used to declare that x is a global variable - hence, when we assign a value to x inside the function, that change is reflected when we use the value of x in the main block.<br/>
+<br/>
+You can specify more than one global variable using the same global statement e.g. <i>global x, y, z</i></html><script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

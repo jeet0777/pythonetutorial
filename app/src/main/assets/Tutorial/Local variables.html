@@ -1,0 +1,39 @@
+<html>
+    
+    <title>lical variables</title>
+    <h1>local variable</h1>
+
+When you declare variables inside a function definition, they are not related in any way to other variables with the same names used outside the function - i.e. variable names are local to the function. This is called the scope of the variable. All variables have the scope of the block they are declared in starting from the point of definition of the name.<br/>
+<br/>
+<b>Example</b> (save as function_local.py ):<br/>
+<i>x = 50<br/>
+<br/>
+def func(x):<br/>
+&nbsp;&nbsp;print('x is', x)<br/>
+&nbsp;&nbsp;x = 2<br/>
+&nbsp;&nbsp;print('Changed local x to', x)<br/>
+<br/>
+func(x)<br/>
+print('x is still', x)</i><br/>
+<br/>
+<b>Output:</b><br/>
+$ python function_local.py<br/>
+x is 50<br/>
+Changed local x to 2<br/>
+x is still 50<br/>
+<br/>
+<b>How It Works</b><br/>
+The first time that we print the value of the name x with the first line in the function's body, Python uses the value of the parameter declared in the main block, above the function definition.<br/>
+<br/>
+Next, we assign the value 2 to x . The name x is local to our function. So, when we change the value of x in the function, the x defined in the main block remains unaffected.<br/>
+<br/>
+With the last print statement, we display the value of x as defined in the main block, thereby confirming that it is actually unaffected by the local assignment within the previously called function.</html><script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tutorial"
+    android:id="@+id/mainlayout"
+    android:orientation="vertical"
+    android:background="?attr/backgroundcolor"
+    android:animateLayoutChanges="true"
+    android:animationCache="true">
+
+
+
+    <!--<TextView
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_margin="10dp"
+        android:id="@+id/gettitle"
+        android:textStyle="bold|italic"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:gravity="center"
+        android:visibility="gone"
+        android:clickable="true"
+        android:textColor="?attr/text_quiz_view"
+        android:foreground="?attr/selectableItemBackground"
+        android:background="@drawable/rectangle_border"/>
+-->
+<!--
+    <RelativeLayout
+        android:id="@+id/first"
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:background="@drawable/rectangle_border">
+-->
+    <WebView
+        android:id="@+id/tutorial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        android:layout_margin="2dp"
+        android:background="?attr/backgroundcolor"
+        />
+
+
+        <ProgressBar
+    android:id="@+id/pgb1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"
+    android:visibility="gone" />
+
+<!--
+    </RelativeLayout>
+-->
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"></LinearLayout>
+
+
+</RelativeLayout>

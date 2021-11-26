@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Quizview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="?attr/backgroundcolor"
+    tools:context=".Quiz">
+
+
+
+  <!--  <ProgressBar
+        android:id="@+id/showprogres"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+        android:progress="0" />
+
+  -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/questiongroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:id="@+id/currentScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score: "
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/noofquestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question: "
+            android:textSize="24dp" />
+
+        <View
+            android:layout_marginTop="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?attr/text_quiz_view" />
+
+        <TextView
+            android:id="@+id/Questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="?attr/text_quiz_view"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <ScrollView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioGroup
+
+                    android:scrollIndicators="bottom"
+                    android:isScrollContainer="true"
+                    android:id="@+id/optiongroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+
+                        android:id="@+id/OptionA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:background="@drawable/mycustomstyle"
+                        android:button="@android:color/transparent"
+                        android:padding="14dp"
+
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="?attr/text_quiz_view"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/OptionB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:background="@drawable/mycustomstyle"
+                        android:button="@android:color/transparent"
+                        android:padding="14dp"
+
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="?attr/text_quiz_view"
+                        android:textSize="20sp" />
+
+
+                    <RadioButton
+                        android:id="@+id/OptionC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:background="@drawable/mycustomstyle"
+                        android:button="@android:color/transparent"
+                        android:padding="14dp"
+
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="?attr/text_quiz_view"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/OptionD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:background="@drawable/mycustomstyle"
+                        android:button="@android:color/transparent"
+                        android:padding="14dp"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="?attr/text_quiz_view"
+                        android:textSize="20sp" />
+                </RadioGroup>
+            </ScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/backgroundcolor"
+        android:elevation="12dp"
+        android:outlineAmbientShadowColor="@color/grey">
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/ic_next"
+            android:gravity="center"
+            android:text="Next"
+            android:layout_marginBottom="10dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>
+

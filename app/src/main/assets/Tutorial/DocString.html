@@ -1,0 +1,50 @@
+<html>
+    
+<title>DocString</title>
+<h1>Docstring</h1>
+Python has a nifty feature called documentation strings, usually referred to by its shorter name docstrings. DocStrings are an important tool that you should make use of since it helps to document the program better and makes it easier to understand. Amazingly, we can even get the docstring back from, say a function, when the program is actually running!<br/>
+<br/>
+<b>Example</b> (save as function_docstring.py ):<br/><hr>
+<i>def print_max(x, y):<br/>
+&nbsp;&nbsp;'''Prints the maximum of two numbers.<br/>
+<br/>
+&nbsp;&nbsp;The two values must be integers.'''<br/>
+&nbsp;&nbsp;# convert to integers, if possible<br/>
+&nbsp;&nbsp;x = int(x)<br/>
+&nbsp;&nbsp;y = int(y)<br/>
+<br/>
+&nbsp;&nbsp;if x > y:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print(x, 'is maximum')<br/>
+&nbsp;&nbsp;else:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print(y, 'is maximum')<br/>
+<br/>
+print_max(3, 5)<br/>
+print(print_max.__doc__)</i><br/>
+<br/><hr>
+<b>Output:</b><br/>
+$ python function_docstring.py<br/>
+5 is maximum<br/>
+Prints the maximum of two numbers.<br/>
+The two values must be integers.<br/>
+<br/><hr>
+<b>How It Works</b><br/>
+A string on the first logical line of a function is the docstring for that function. Note that DocStrings also apply to modules and classes which we will learn about in the respective chapters.<br/>
+<br/>
+The convention followed for a docstring is a multi-line string where the first line starts with a capital letter and ends with a dot. Then the second line is blank followed by any detailed explanation starting from the third line. You are strongly advised to follow this convention for all your docstrings for all your non-trivial functions.<br/>
+<br/>
+We can access the docstring of the print_max function using the __doc__ (notice the double underscores) attribute (name belonging to) of the function. Just remember that Python treats everything as an object and this includes functions. We'll learn more about objects in the chapter on classes.<br/>
+<br/>
+If you have used help() in Python, then you have already seen the usage of docstrings!<br/>
+What it does is just fetch the __doc__ attribute of that function and displays it in a neat manner for you. You can try it out on the function above - just include help(print_max) in your program. Remember to press the q key to exit help.<br/>
+<br/>
+Automated tools can retrieve the documentation from your program in this manner. Therefore, I strongly recommend that you use docstrings for any non-trivial function that you write. The pydoc command that comes with your Python distribution works similarly to help() using docstrings.</html>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

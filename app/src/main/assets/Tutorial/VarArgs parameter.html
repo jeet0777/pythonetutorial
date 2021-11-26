@@ -1,0 +1,46 @@
+<html>
+    
+    <title>varargs</title>
+    <h1>VarsArgs Parameters</h1>
+Sometimes you might want to define a function that can take any number of parameters, i.e. variable number of arguments, this can be achieved by using the stars.<br/>
+ <br/>
+<b>Example</b> (save as function_varargs.py ):<br/>
+<i>def total(a=5, *numbers, **phonebook):<br/>
+&nbsp;&nbsp;print('a', a)<br/>
+<br/>
+&nbsp;&nbsp;#iterate through all the items in tuple<br/>
+&nbsp;&nbsp;for single_item in numbers:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print('single_item', single_item)<br/>
+<br/>
+&nbsp;&nbsp;#iterate through all the items in dictionary<br/>
+&nbsp;&nbsp;for first_part, second_part in phonebook.items():<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print(first_part,second_part)<br/>
+<br/>
+print(total(10,1,2,3,Jack=1123,John=2231,Inge=1560))</i><br/>
+<br/>
+<b>Output:</b><br/>
+$ python function_varargs.py<br/>
+a 10<br/>
+single_item 1<br/>
+single_item 2<br/>
+single_item 3<br/>
+Inge 1560<br/>
+John 2231<br/>
+Jack 1123<br/>
+None<br/>
+<br/>
+<b>How It Works</b><br/>
+When we declare a starred parameter such as *param , then all the positional arguments from that point till the end are collected as a tuple called 'param'.<br/>
+<br/>
+Similarly, when we declare a double-starred parameter such as **param , then all the keyword arguments from that point till the end are collected as a dictionary called 'param'.<br/>
+<br/>
+We will explore tuples and dictionaries in a later chapter.</html><script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

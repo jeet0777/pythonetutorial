@@ -1,0 +1,36 @@
+<html>
+    <title>Packages</title>
+    
+    <h1>Packages</h1>
+By now, you must have started observing the hierarchy of organizing your programs. Variables usually go inside functions. Functions and global variables usually go inside modules. What if you wanted to organize modules? That's where packages come into the picture.<br/>
+<br/>
+Packages are just folders of modules with a special __init__.py file that indicates to Python that this folder is special because it contains Python modules.<br/>
+<br/>
+Let's say you want to create a package called 'world' with subpackages 'asia', 'africa', etc. and these subpackages in turn contain modules like 'india', 'madagascar', etc.<br/>
+<br/>
+This is how you would structure the folders:<br/>
+<br/>
+- <some folder present in the sys.path>/<br/>
+&nbsp;&nbsp;- world/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- __init__.py<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- asia/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- __init__.py<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- india/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- __init__.py<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- foo.py<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- africa/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- __init__.py<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- madagascar/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- __init__.py<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- bar.py<br/>
+<br/>
+Packages are just a convenience to hierarchically organize modules. You will see many instances of this in the standard library.</some></html><script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

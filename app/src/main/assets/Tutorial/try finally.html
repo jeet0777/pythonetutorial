@@ -1,0 +1,55 @@
+<html>
+    <title>try and finally</title>
+    <h1>try finally</h1>
+Suppose you are reading a file in your program. How do you ensure that the file object is closed properly whether or not an exception was raised? This can be done using the finally block.<br/>
+<br/>
+<b>Example</b>(Save as exceptions_finally.py) :<br/>
+<i>import sys<br/>
+import time<br/>
+<br/>
+f = None<br/>
+try:<br/>
+&nbsp;&nbsp;f = open("poem.txt")<br/>
+&nbsp;&nbsp;# Our usual file-reading idiom<br/>
+&nbsp;&nbsp;while True:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;line = f.readline()<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;if len(line) == 0:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print(line, end='')<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;sys.stdout.flush()<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Press ctrl+c now")<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;# To make sure it runs for a while<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;time.sleep(2)<br/>
+except IOError:<br/>
+&nbsp;&nbsp;print("Could not find file poem.txt")<br/>
+except KeyboardInterrupt:<br/>
+&nbsp;&nbsp;print("!! You cancelled the reading from the file.")<br/>
+finally:<br/>
+&nbsp;&nbsp;if f:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;f.close()<br/>
+&nbsp;&nbsp;print("(Cleaning up: Closed the file)")</i><br/>
+<br/>
+<b>Output:</b><br/>
+$ python exceptions_finally.py<br/>
+Programming is fun<br/>
+Press ctrl+c now<br/>
+^C!! You cancelled the reading from the file.<br/>
+(Cleaning up: Closed the file)<br/>
+<br/>
+<b>How It Works</b><br/>
+We do the usual file-reading stuff, but we have arbitrarily introduced sleeping for 2 seconds after printing each line using the time.sleep function so that the program runs slowly (Python is very fast by nature). When the program is still running, press ctrl + c to interrupt/cancel the program.<br/>
+<br/>
+Observe that the KeyboardInterrupt exception is thrown and the program quits. However, before the program exits, the finally clause is executed and the file object is always closed.<br/>
+<br/>
+Notice that a variable assigned a value of 0 or None or a variable which is an empty sequence or collection is considered False by Python. This is why we can use if: f in the code above.<br/>
+<br/>
+Also note that we use sys.stdout.flush() after print so that it prints to the screen immediately.</html><script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

@@ -1,0 +1,69 @@
+
+<html>
+    <head>
+<script src="swal.js"></script><link type="text/css" rel="stylesheet" href="mystyle.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            //div{ word-wrap: break-word;white-space: pre-line;border:2px red solid;}
+            //p{border:2px red solid; word-wrap: break-word;white-space: pre-line;}
+        </style>
+        
+    </head>
+    <body>
+       <span class="info">Program</span><br>
+
+<div class="hi" id="mi"> 
+
+# Python3 code to demonstrate working of 
+# Minimum String length 
+# using min() + generator expression 
+  
+# initialize list  
+test_list = ['gfg', 'is', 'best'] 
+  
+# printing original list  
+print("The original list : " + str(test_list)) 
+  
+# Minimum String length 
+# using min() + generator expression 
+res = min(len(ele) for ele in test_list) 
+  
+# printing result 
+print("Length of minimum string is : " + str(res))
+        </div>
+     <button class="button click" onclick="copyElementText()">Copy Code</button><br/>
+<b>output:-</b>
+	<br/><div class="hi" > 
+      
+The original list : ['gfg', 'is', 'best']
+Length of minimum string is : 2
+      </div>  
+      <script>
+function copyElementText() {
+    var text = document.getElementById("mi").innerText;
+    var elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = text;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+	swal("Copied", "", "success");
+
+	//alert("copied ");
+}
+</script>
+    </body>
+    <script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>
+
+</html>

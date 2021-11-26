@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Comment_System"
+    android:background="?attr/backgroundcolor">
+
+    <WebView
+        android:id="@+id/cmns"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
+    <ImageView
+        android:id="@+id/hidden"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_sad"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:contentDescription="@string/not_connected_to_internet" />
+
+    <TextView
+        android:id="@+id/hiddentv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/hidden"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginBottom="-42dp"
+        android:text="@string/not_connected_to_internet"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        android:visibility="gone" />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:id="@+id/pgb7"/>
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<html>
+    <title>for statement</title>
+<b>For Statement</b>
+<br/>
+It is used to iterate over a sequence (list, tuple, string) or other iterable objects.<br/>
+<br/>
+<b>Syntax:</b><br/>
+<i>for val in sequence:<br/>
+&nbsp;&nbsp;Statement<br/>
+else:<br/>
+&nbsp;&nbsp;Statement</i><br/>
+<br/>
+Here, val is the variable that takes the value of the item inside the sequence on each iteration.<br/>
+<br/>
+Loop continues until we reach the last item in the sequence. The body of for loop is separated from the rest of the code using indentation. You can use nested loop(one loop inside another loop).<br/>
+<br/>
+If loop runs to completion it terminates it will executes else block if present.<br/>
+A for loop can have an optional else block as well.<br/>
+If continue statement executed inside for..in loop, control is immediately passed to the top of loop and the next iteration begins.<br/>
+ <br/>
+It can skip else clause in following scenarios:<br/>
+1.If loop is broken out due to some break statement or a return statement(if the loop is in a function or method)<br/>
+2.If exception occurs, python skips the else clause and looks for a suitable exception handler.<br/>
+<br/>
+<b>Example</b><br/>
+<i>for i in Range(1,5):<br/>
+&nbsp;&nbsp;print I<br/>
+else:<br/>
+&nbsp;&nbsp;print ”The loop is over”</i><br/>
+<br/>
+This program will print the sequence of numbers, for that we are using python in-built Range function. Here in this program we have supplied two numbers to the Range function, so that it will return the sequence starts from first number up to the second number. In this case it will returns the sequence[1,2,3,4] (Note: Range extends up to second number i.e it does not include the second number).<br/>
+In this example the for loop iterates over the range- for i in Range[1,5] is equivalent to for i in [1,2,3,4] i.e here it will assign sequence value to i, one at a time and then executing block of statement for each iteration. Here we are printing value of i. In for..in loop else is optional, It will executes once after the for loop is over, if present.</html><script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

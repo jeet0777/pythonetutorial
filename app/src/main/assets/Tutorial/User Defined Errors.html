@@ -1,0 +1,19 @@
+Python also allows you to create your own exceptions by deriving either directly or indirectly classes from the standard built-in exceptions.<br/>
+<br/>
+Here is an example related to RuntimeError. Here, a class is created that is subclassed from RuntimeError. This is useful when you need to display more specific information when an exception is caught.<br/>
+<br/>
+In the try block, the user-defined exception is raised and caught in the except block. The variable e is used to create an instance of the class URLError.<br/>
+<br/>
+<i>class URLError(RuntimeError):<br/>
+&nbsp;&nbsp;def __init__(self, arg):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;self.args = arg</i><br/>
+<br/>
+So once you defined above class, you can raise the exception as follows −<br/>
+<i>try:<br/>
+&nbsp;&nbsp;raise URLError("URL not available")<br/>
+except URLError,e:<br/>
+&nbsp;&nbsp;print e.args</i><br/>
+   <br/>
+When we are developing a large Python program, it is a good practice to place all the user-defined exceptions that our program raises in a separate file. Many standard modules do this. They define their exceptions separately as exceptions.py or errors.py (generally but not always).<br/>
+<br/>
+User-defined exception class can implement everything a normal class can do, but we generally make them simple and concise. Most implementations declare a custom base class and derive others exception classes from this base class.

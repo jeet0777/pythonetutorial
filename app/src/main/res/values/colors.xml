@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="yellow">#fff0</color>
+    <color name="white">#ffff</color>
+    <color name="red">#ff0101</color>
+    <color name="grey">#1010</color>
+    <color name="black">#000000</color>
+    <color name="dark_grey">#11F3EEEE</color>
+    <color name="cofee">#3F3C3C</color>
+    <color name="coffe_type">#4BCFCDCD</color>
+    <color name="webview_bg_for_program_section">#303030</color>
+    <color name="background_button">#fcfcfcfc</color>
+    <color name="background_button_dark">#303030</color>
+</resources>

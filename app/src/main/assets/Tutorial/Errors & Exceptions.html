@@ -1,0 +1,39 @@
+<html>
+    <title>Errors& Exception</title>
+<h1>Errors&exception</h1>
+Exceptions occur when exceptional situations occur in your program. For example, what if you are going to read a file and the file does not exist? Or what if you accidentally deleted it when the program was running? Such situations are handled using exceptions.<br/>
+<br/>
+Similarly, what if your program had some invalid statements? This is handled by Python which raises its hands and tells you there is an error.<br/>
+<br/>
+<br/>
+<font color="#E91E63"><b>Errors</b></font><br/>
+Consider a simple print function call. What if we misspell print as Print ? Note the capitalization. In this case, Python raises a syntax error.<br/>
+<i>&gt;&gt;&gt; Print("Hello World")<br/>
+Traceback (most recent call last):<br/>
+&nbsp;&nbsp;File "&lt;stdin&gt;", line 1, in &lt;module><br/>
+NameError: name 'Print' is not defined<br/>
+&gt;&gt;&gt; print("Hello World")<br/>
+Hello World</i><br/>
+<br/>
+Observe that a NameError is raised and also the location where the error was detected is printed. This is what an error handler for this error does.<br/>
+<br/>
+<br/>
+<font color="#E91E63"><b>Exceptions</b></font>
+<br/>
+We will try to read input from the user. Enter the first line below and hit the Enter key. When your computer prompts you for input, instead press [ctrl-d] on a Mac or [ctrl-z] with Windows and see what happens. (If you're using Windows and neither option works, you can try [ctrl-c] in the Command Prompt to generate a KeyboardInterrupt error instead).<br/>
+<i>&gt;&gt;&gt; s = input('Enter something --> ')<br/>
+Enter something --> Traceback (most recent call last):<br/>
+&nbsp;&nbsp;File "<stdin>", line 1, in <module><br/>
+EOFError</i><br/>
+<br/>
+Python raises an error called EOFError which basically means it found an end of file symbol (which is represented by ctrl-d ) when it did not expect to see it.</module></stdin></html>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

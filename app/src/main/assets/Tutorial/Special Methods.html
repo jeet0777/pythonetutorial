@@ -1,0 +1,37 @@
+<html>
+    
+    
+    <title>special methods</title>
+    <h1>Special methods</h1>
+There are certain methods such as the __init__ and __del__ methods which have special significance in classes.<br/>
+<br/>
+Special methods are used to mimic certain behaviors of built-in types. For example, if you want to use the x[key] indexing operation for your class (just like you use it for lists and tuples), then all you have to do is implement the __getitem__() method and your job is done. If you think about it, this is what Python does for the list class itself!<br/>
+<br/>
+Some useful special methods are listed below<br/>
+<br/>
+<b>__init__(self, ...)</b><br/>
+This method is called just before the newly created object is returned for usage.<br/>
+<br/>
+<b>__del__(self)</b><br/>
+Called just before the object is destroyed (which has unpredictable timing, so avoid using this)<br/>
+<br/>
+<b>__str__(self)</b><br/>
+Called when we use the print function or when str() is used.<br/>
+<br/>
+<b>__lt__(self, other)</b><br/>
+Called when the less than operator (<) is used. Similarly, there are special methods for all the operators (+, >, etc.)<br/>
+<br/>
+<b>__getitem__(self, key)</b><br/>
+Called when x[key] indexing operation is used.<br/>
+<br/>
+<b>__len__(self)</b><br/>
+Called when the built-in len() function is used for the sequence object.</html><script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

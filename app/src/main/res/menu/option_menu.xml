@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <item
+        android:title="Dark Mode"
+        android:id="@+id/it1"
+        app:showAsAction="never"
+        android:checkable="true"
+        />
+
+
+    <item
+        android:id="@+id/fnt"
+        android:title="Font size"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/refo"
+        android:title="Refernce"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/it3"
+        android:title="About"
+        app:showAsAction="never"
+        />
+
+    </menu>

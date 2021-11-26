@@ -1,0 +1,27 @@
+<html>
+    <title>Lambda forms</title>
+<h1>Lambda forms</h1>
+A lambda statement is used to create new function objects. Essentially, the lambda takes a parameter followed by a single expression. Lambda becomes the body of the function. The value of this expression is returned by the new function.<br/>
+<br/>
+<b>Example</b> (save as more_lambda.py ):<br/>
+<i>points = [{'x': 2, 'y': 3},<br/>
+&nbsp;&nbsp;{'x': 4, 'y': 1}]<br/>
+points.sort(key=lambda i: i['y'])<br/>
+print(points)</i><br/>
+<br/>
+<b>Output:</b><br/>
+$ python more_lambda.py<br/>
+[{'y': 1, 'x': 4}, {'y': 3, 'x': 2}]<br/>
+<br/>
+<i>How It Works</i><br/>
+Notice that the sort method of a list can take a key parameter which determines how the list is sorted (usually we know only about ascending or descending order). In our case, We want to do a custom sort, and for that we need to write a function. Instead of writing a separate def block for a function that will get used in only this one place, we use a lambda expression to create a new function.</html>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>flow in python</title>
+</head>
+<body>
+<pre> 
+    In general, statements are executed sequentially: The first statement in a function is 
+executed first, followed by the second, and so on. There may be a situation when you 
+need to execute a block of code several number of times. 
+Programming languages provide various control structures that allow for more 
+complicated execution paths.
+A loop statement allows us to execute a statement or group of statements multiple 
+times. The following diagram illustrates a loop statement:
+Python programming language provides following types of loops to handle looping 
+requirements.
+<table border="1">
+<th>loop type</th>
+<th>Description</th>
+<tr>
+<td>while loop</td> 
+<td>Repeats a statement or group of statements while a given 
+condition is TRUE. It tests the condition before executing the 
+loop body</td>
+<tr>
+<td>for loop</td>
+<td>Executes a sequence of statements multiple times and 
+abbreviates the code that manages the loop variable.</td>
+</tr>
+</table> 
+<hr><hr>
+<h3>While Loop</h3>
+A while loop statement in Python programming language repeatedly executes a 
+target statement as long as a given condition is true.
+Syntax
+The syntax of a while loop in Python programming language is:
+while expression:
+<hr>
+ statement(s)
+ <hr>
+Here, statement(s) may be a single statement or a block of statements. 
+The condition may be any expression, and true is any non-zero value. The loop 
+iterates while the condition is true.
+When the condition becomes false, program control passes to the line immediately 
+following the loop.
+In Python, all the statements indented by the same number of character spaces after 
+a programming construct are considered to be part of a single block of code. Python 
+uses indentation as its method of grouping statements.
+<h3>Example</h3> 
+<hr>
+#!/usr/bin/python<br>
+count = 0<br>
+while (count < 9):<br> 
+ print 'The count is:', count<br>
+ count = count + 1<br>
+print "Good bye!"<br> 
+<hr>
+When the above code is executed, it produces the following result:
+<hr> 
+The count is: 0
+The count is: 1
+The count is: 2
+The count is: 3
+The count is: 4
+The count is: 5
+The count is: 6
+The count is: 7
+The count is: 8
+Good bye!
+<hr>
+<hr>
+<h3>For Loop</h3>
+<hr>
+It has the ability to iterate over the items of any sequence, such as a list or a string.
+<br><b>Syntax</b>
+<hr>
+for iterating_var in sequence:<br>
+ statements(s)
+ <hr>
+ <p>If a sequence contains an expression list, it is evaluated first. Then, the first item in 
+the sequence is assigned to the iterating variable iterating_var. Next, the statements 
+block is executed. Each item in the list is assigned to iterating_var, and the 
+statement(s) block is executed until the entire sequence is exhausted.</p>
+<b>Example</b>
+<hr>
+#!/usr/bin/python<br>
+for letter in 'Python': # First Example<br>
+ print 'Current Letter :', letter<br>
+fruits = ['banana', 'apple', 'mango']<br>
+for fruit in fruits: # Second Example<br>
+ print 'Current fruit :', fruit<br>
+
+print "Good bye!"
+<br><hr>
+When the above code is executed, it produces the following <b>result:</b>
+<hr>
+Current Letter : P
+Current Letter : y
+Current Letter : t
+Current Letter : h
+Current Letter : o
+Current Letter : n
+Current fruit : banana
+Current fruit : apple
+Current fruit : mango
+Good bye!>
+<hr>
+</body>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>
+
+</html>

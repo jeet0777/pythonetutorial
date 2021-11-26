@@ -1,0 +1,87 @@
+<resources>
+       <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#009688</item>
+        <item name="colorPrimaryDark">#009688</item>
+        <item name="backgroundcolor">#fcfcfc</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="textcolor">#808080</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+        <item name="webview_color">#ffff</item>
+        <item name="cardbg">#ffffff</item>
+        <item name="cards_comment">#FFF8F8</item>
+        <!--<item name="cards_comment">#FFF8F8</item>-->
+        <item name="date_color">#2E3333</item>
+        <item name="text_quiz_view">#000000</item>
+        <item name="list_items_color">#FFF6F6</item>
+        <item name="list_bg">#E7E5E5</item>
+        <item name="list_text">#f00</item>
+
+
+        <!-- gradient effect -->
+        <item name="center_color">@android:color/holo_purple</item>
+        <item name="start_color">#00B0FF</item>
+        <item name="end_color">@color/yellow</item>
+        <item name="btn_transparent">@android:color/transparent</item>
+
+
+    </style>
+
+
+    <!-- Dark theme. -->
+    <style name="darkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#212121</item>
+        <item name="android:itemBackground">#000000</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="backgroundcolor">#303030</item>
+        <item name="webview_color">#D0000000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="textcolor">#000000</item>
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="cardbg">#000000</item>
+        <!--<item name="cards_comment">#AEFFFFFF</item>-->
+        <item name="cards_comment">#AE6D6B6B</item>
+        <item name="date_color">#D6D2D2</item>
+        <item name="btn_transparent">#C16F6D6D</item>
+        <item name="text_quiz_view">#ffffff</item>
+        <item name="list_items_color">#000000</item>
+        <item name="list_bg">#303030</item>
+        <item name="list_text">#f0f</item>
+
+        <!-- gradient effect -->
+        <item name="center_color">@color/black</item>
+        <item name="start_color">@color/cofee</item>
+        <item name="end_color">@color/coffe_type</item>
+    </style>
+
+    <style name="white" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="colorAccent">@android:color/black</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:radioButtonStyle">@color/black</item>
+
+    </style>
+    <style name="dark" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">@android:color/holo_blue_light</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:windowBackground">@android:color/darker_gray</item>
+        <item name="android:radioButtonStyle">@color/white</item>
+     </style>
+
+
+    <style name="FABtnstyle">
+
+<!--<item name="android:background">@android:color/transparent</item>-->
+        <!--<item name="android:amPmBackgroundColor">@android:color/transparent</item>-->
+
+    <!--<item name="android:startColor">#5612</item>-->
+    <!--<item name="android:endColor">#5614CC</item>-->
+    <!--<item name="android:centerColor">#56AA</item>-->
+        <item name="colorAccent">#E91E63</item>
+
+    </style>
+
+</resources>

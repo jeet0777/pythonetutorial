@@ -1,0 +1,62 @@
+<html>
+<title>break statement</title>
+<h1>Break statement</h1>
+Loops iterate over a block of code until test expression is false, but sometimes we wish to terminate the current iteration or even the whole loop without checking test expression. <br/>
+The break  statement is used to break out of a loop statement i.e. stop the execution ofa looping statement, even if the loop condition has not become False  or the sequence. <br/>
+ Control of the program flows to the statement immediately after the body of the loop.<br/>
+<br/>
+If break statement is inside a nested loop (loop inside another loop), break will terminate the innermost loop.<br/>
+<br/>
+<b>Break in for loop</b><br/><hr>
+<br/>
+<i>for var in “python”:<br/>
+&nbsp;&nbsp;&nbsp;if var == “y”:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br/>
+&nbsp;&nbsp;&nbsp;print(var)<br/>
+print(“end of loop”)</i><br/>
+<br/><hr>
+<b>Output :</b><br/>
+p<br/>
+end of loop<br/>
+<br/><hr>
+<br/>
+In this program, we iterate through the "python" sequence. We check if the letter is "y” , upon which we break from the loop. Hence, we see in our output that all the letters up till "y" gets printed. After that, the loop terminates.<br/>
+<br/>
+<b>Break in while loop</b><br/><hr>
+<i>while True:   <br/>
+&nbsp;&nbsp;&nbsp;s = raw_input('Enter something : ')   <br/>
+&nbsp;&nbsp;&nbsp;if s == 'quit':       <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break    <br/>
+&nbsp;&nbsp;&nbsp;print 'Length of the string is', len(s)<br/>
+print 'Done'</i><br/>
+<br/><hr>
+<b>Output :</b><br/><hr>
+Enter something : Programming is fun<br/>
+Length of the string is 18<br/>
+Enter something : When the work is done<br/>
+Length of the string is 21<br/>
+Enter something : if you wanna make your work also fun:<br/>
+Length of the string is 37<br/>
+Enter something : use Python!<br/>
+Length of the string is 11<br/>
+Enter something : quit<br/>
+Done<br/><hr>
+<br/>
+In this program, we repeatedly take the user’s input and print the length of each input each time. We are providing a special condition to stop the program by checking if the user input is 'quit' . <br/>
+We stop the program by breaking out of the loop and reach the end of the program.<br/>
+<br/>
+note : if you break out of a for  or while  loop, any corresponding loop else  block is not executed.
+
+<hr/>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>
+
+</html>

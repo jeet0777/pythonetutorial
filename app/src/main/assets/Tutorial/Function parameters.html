@@ -1,0 +1,44 @@
+<html>
+    <title>function parameters</title>
+<h1>functions parameters</h1>
+A function can take parameters, which are values you supply to the function so that the function can do something utilising those values. These parameters are just like variables except that the values of these variables are defined when we call the function and are already assigned values when the function runs.<br/>
+<br/>
+Parameters are specified within the pair of parentheses in the function definition, separated by commas. When we call the function, we supply the values in the same way. Note the terminology used - the names given in the function definition are called parameters whereas the values you supply in the function call are called arguments.<br/>
+<br/>
+<b>Example</b> (save as function_param.py ):<br/>
+<i>def print_max(a, b):<br/>
+&nbsp;&nbsp;if a > b:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print(a, 'is maximum')<br/>
+&nbsp;&nbsp;elif a == b:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print(a, 'is equal to', b)<br/>
+&nbsp;&nbsp;else:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;print(b, 'is maximum')<br/>
+<br/>
+# directly pass literal values<br/>
+print_max(3, 4)<br/>
+<br/>
+x = 5<br/>
+y = 7<br/>
+<br/>
+# pass variables as arguments<br/>
+print_max(x, y)</i><br/>
+<br/>
+<b>Output:</b><br/>
+$ python function_param.py<br/>
+4 is maximum<br/>
+7 is maximum<br/>
+<br/>
+<b>How It Works</b><br/>
+Here, we define a function called print_max that uses two parameters called a and b .<br/>
+We find out the greater number using a simple if..else statement and then print the bigger number.<br/>
+<br/>
+The first time we call the function print_max , we directly supply the numbers as arguments. In the second case, we call the function with variables as arguments. print_max(x, y) causes the value of argument x to be assigned to parameter a and the value of Functions argument y to be assigned to parameter b . The print_max function works the same way in both cases.</html><script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

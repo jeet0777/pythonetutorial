@@ -1,0 +1,21 @@
+Ever wished you could return two different values from a function? You can. All you have to do is use a tuple.<br/>
+<br/>
+<i>&gt;&gt;&gt; def get_error_details():<br/>
+... return (2, 'details')<br/>
+...<br/>
+&gt;&gt;&gt; errnum, errstr = get_error_details()<br/>
+&gt;&gt;&gt; errnum<br/>
+2 ><br/>
+>> errstr<br/>
+'details'</i><br/>
+<br/>
+Notice that the usage of a, b = &lt;some expression&gt; interprets the result of the expression as a tuple with two values.<br/>
+<br/>
+This also means the fastest way to swap two variables in Python is:<br/>
+<br/>
+<i>&gt;&gt;&gt; a = 5; b = 8<br/>
+&gt;&gt;&gt; a, b<br/>
+(5, 8)<br/>
+&gt;&gt;&gt; a, b = b, a<br/>
+&gt;&gt;&gt; a, b<br/>
+(8, 5)</i>

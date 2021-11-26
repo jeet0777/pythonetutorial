@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundcolor"
+    tools:context=".CommentsIdea"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <!--<ScrollView
+        android:background="?attr/backgroundcolor"
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="494dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.515">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/FetchData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </ScrollView>
+-->
+  <!--
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:background="?attr/backgroundcolor"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="546dp">
+
+        <EditText
+            android:layout_gravity="start"
+            android:id="@+id/submit_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/submit_to_fb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@color/colorPrimary"
+           android:text="submit" />
+    </LinearLayout>
+
+-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/FetchData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginBottom="?attr/actionBarSize">
+    </androidx.recyclerview.widget.RecyclerView></LinearLayout>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/backgroundcolor"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/myprofile"
+            android:layout_weight="0.1"
+            android:layout_gravity="bottom"
+            />
+        <EditText
+           android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:gravity="start"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:id="@+id/submit_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:textColor="?attr/text_quiz_view"
+            android:hint="Enter Your Comments"
+            android:paddingStart="10dp"/>
+
+        <Button
+
+            android:layout_marginRight="9dp"
+            android:layout_gravity="end|bottom"
+            android:id="@+id/submit_to_fb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:text="submit"
+
+          />
+    </LinearLayout>
+
+</RelativeLayout>

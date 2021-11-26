@@ -1,0 +1,87 @@
+<html>
+    <title>sequence</title>
+    <h1>Sequences</h1>
+Lists, tuples and strings are examples of sequences, but what are sequences and what is so special about them?<br/>
+<br/>
+The major features are membership tests, (i.e. the in and not in expressions) and indexing operations, which allow us to fetch a particular item in the sequence directly.<br/>
+<br/>
+The three types of sequences mentioned above - lists, tuples and strings, also have a slicing operation which allows us to retrieve a slice of the sequence i.e. a part of the sequence.<br/>
+<br/>
+<b>Example</b> (save as ds_seq.py )<br/>
+<i>shoplist = ['apple', 'mango', 'carrot', 'banana']<br/>
+name = 'Codelyf'<br/>
+# Indexing or 'Subscription' operation #<br/>
+print('Item 0 is', shoplist[0])<br/>
+print('Item 1 is', shoplist[1])<br/>
+print('Item 2 is', shoplist[2])<br/>
+print('Item 3 is', shoplist[3])<br/>
+print('Item -1 is', shoplist[-1])<br/>
+print('Item -2 is', shoplist[-2])<br/>
+print('Character 0 is', name[0])<br/>
+# Slicing on a list #<br/>
+print('Item 1 to 3 is', shoplist[1:3])<br/>
+print('Item 2 to end is', shoplist[2:])<br/>
+print('Item 1 to -1 is', shoplist[1:-1])<br/>
+print('Item start to end is', shoplist[:])<br/>
+# Slicing on a string #<br/>
+print('characters 1 to 3 is', name[1:3])<br/>
+print('characters 2 to end is', name[2:])<br/>
+print('characters 1 to -1 is', name[1:-1])<br/>
+print('characters start to end is', name[:])</i><br/>
+<br/>
+<b>Output:</b><br/>
+$ python ds_seq.py<br/>
+Item 0 is apple<br/>
+Item 1 is mango<br/>
+Item 2 is carrot<br/>
+Item 3 is banana<br/>
+Item -1 is banana<br/>
+Item -2 is carrot<br/>
+Character 0 is s<br/>
+Item 1 to 3 is ['mango', 'carrot']<br/>
+Item 2 to end is ['carrot', 'banana']<br/>
+Item 1 to -1 is ['mango', 'carrot']<br/>
+Item start to end is ['apple', 'mango', 'carrot', 'banana']<br/>
+characters 1 to 3 is od<br/>
+characters 2 to end is delyf<br/>
+characters 1 to -1 is odely<br/>
+characters start to end is codelyf<br/>
+<br/>
+<b>How It Works</b><br/>
+First, we see how to use indexes to get individual items of a sequence. This is also referred to as the subscription operation. Whenever you specify a number to a sequence within square brackets as shown above, Python will fetch you the item corresponding to that position in the sequence. Remember that Python starts counting numbers from 0. Hence, shoplist[0] fetches the first item and shoplist[3] fetches the fourth item in the shoplist sequence.<br/>
+<br/>
+The index can also be a negative number, in which case, the position is calculated from the end of the sequence. Therefore, shoplist[-1] refers to the last item in the sequence and shoplist[-2] fetches the second last item in the sequence.<br/>
+<br/>
+The slicing operation is used by specifying the name of the sequence followed by an optional pair of numbers separated by a colon within square brackets. Note that this is very similar to the indexing operation you have been using till now. Remember the numbers are optional but the colon isn't.<br/>
+<br/>
+The first number (before the colon) in the slicing operation refers to the position from where the slice starts and the second number (after the colon) indicates where the slice will stop at.<br/>
+If the first number is not specified, Python will start at the beginning of the sequence. If the second number is left out, Python will stop at the end of the sequence. Note that the slice returned starts at the start position and will end just before the end position i.e. the start position is included but the end position is excluded from the sequence slice.<br/>
+<br/>
+Thus, shoplist[1:3] returns a slice of the sequence starting at position 1, includes position 2 but stops at position 3 and therefore a slice of two items is returned. Similarly, shoplist[:] returns a copy of the whole sequence.<br/>
+<br/>
+You can also do slicing with negative positions. Negative numbers are used for positions from the end of the sequence. For example, shoplist[:-1] will return a slice of the sequence which excludes the last item of the sequence but contains everything else.<br/>
+<br/>
+You can also provide a third argument for the slice, which is the step for the slicing (by default, the step size is 1):<br/>
+<br/>
+<i>>>> shoplist = ['apple', 'mango', 'carrot', 'banana']<br/>
+>>> shoplist[::1]<br/>
+['apple', 'mango', 'carrot', 'banana']<br/>
+>>> shoplist[::2]<br/>
+['apple', 'carrot']<br/>
+>>> shoplist[::3]<br/>
+['apple', 'banana']<br/>
+>>> shoplist[::-1]<br/>
+['banana', 'carrot', 'mango', 'apple']</i><br/>
+<br/>
+Notice that when the step is 2, we get the items with position 0, 2,... When the step size is 3, we get the items with position 0, 3, etc.<br/>
+<br/>
+Try various combinations of such slice specifications using the Python interpreter interactively i.e. the prompt so that you can see the results immediately. The great thing about sequences is that you can access tuples, lists and strings all in the same way!</html><script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

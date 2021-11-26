@@ -1,0 +1,77 @@
+<html>
+    <head>
+   <script src="swal.js"></script>
+   <link type="text/css" rel="stylesheet" href="mystyle.css">
+
+        
+        
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        
+        <style>//div{ word-wrap: break-word;white-space: pre-line;border:2px solid red;} p{ border:2px solid red; }</style></head>
+<body>
+    <span class="info">Program</span><br>
+
+<div class="hi" id="mi"> 
+
+# Python program to check if the number is an Armstrong number or not
+
+# take input from the user
+num = int(input("Enter a number: "))
+
+# initialize sum
+sum = 0
+
+# find the sum of the cube of each digit
+temp = num
+while temp > 0:
+   digit = temp % 10
+   sum += digit ** 3
+   temp //= 10
+
+# display the result
+if num == sum:
+   print(num,"is an Armstrong number")
+else:
+   print(num,"is not an Armstrong number") 
+</div>
+<button class="button click" onclick="copyElementText()">Copy Code</button>
+
+<script>
+function copyElementText() {
+    var text = document.getElementById("mi").innerText;
+    var elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = text;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+swal("Copied", "", "success");
+
+//	alert("copied ");
+}
+</script>
+
+<br/>
+<b><u>output:</u></u></B><br/>
+<div class="hi" > 
+
+Enter a number: 663
+663 is not an Armstrong number
+<br>
+</div> 
+</body>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>
+
+</html>

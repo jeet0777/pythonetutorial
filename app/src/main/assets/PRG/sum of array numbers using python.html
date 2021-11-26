@@ -1,0 +1,54 @@
+<html>
+    <script src="swal.js"></script>
+	<link type="text/css" rel="stylesheet" href="mystyle.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+
+
+<span class="info">Program</span><br>
+
+<div class="hi" id="mi"> 
+# Python 3 code to find sum<br>  
+# of elements in given array<br> 
+def _sum(arr,n): <br>
+      
+    # return sum using sum <br> 
+    # inbuilt sum() function <br>
+    return(sum(arr)) <br>
+  
+# driver function <br>
+arr=[] <br>
+# input values to list<br> 
+arr = [12, 3, 4, 15] <br>
+  
+# calculating length of array <br>
+n = len(arr) <br>
+  
+ans = _sum(arr,n) <br>
+  
+# display sum <br>
+print (\'Sum of the array is \',ans) <br>
+  
+</div>
+<button class="button click" onclick="copyElementText()">Copy Code</button><br/>
+<script>
+function copyElementText() {
+    var text = document.getElementById("mi").innerText;
+    var elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = text;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+swal("Copied", "", "success");
+
+//	alert("copied ");
+}
+</script><b>OUTPUT:</b>
+	<br/><div class="hi" > 
+Input : arr[] = {1, 2, 3}<br>
+Output : 6
+</div>
+</body>
+</html>

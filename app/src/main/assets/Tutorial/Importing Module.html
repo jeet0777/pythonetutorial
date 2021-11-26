@@ -1,0 +1,60 @@
+<html>
+    
+    <title>importing module</title>
+<h1>import module</h1>
+<br/>
+<i>import module1[, module2[,... moduleN]</i><br/>
+<br/>
+When the interpreter encounters an import statement, it imports the module if the module is present in the search path. A search path is a list of directories that the interpreter searches before importing a module.<br/>
+<br/>
+<font color="#E91E63"><b>Import statement</b></font><br/>
+We can import a module using import statement and access the definitions inside it using the dot operator. Here is an example.<br/>
+<br/>
+<i>import math<br/>
+print("The value of pi is", math.pi)</i><br/>
+<br/>
+Output:<br/>
+The value of pi is 3.141592653589793<br/>
+<br/>
+We can also rename module. This can save our typing time.<br/>
+<i>#renaming math module as m<br/>
+import math as m<br/>
+print("The value of pi is", m.pi)</i><br/>
+<br/>
+<br/>
+<font color="#E91E63"><b>from...import statement</b></font><br/>
+We can import specific names from a module without importing the module as a whole. Here is an example.<br/>
+<br/>
+<i>from math import sqrt<br/>
+print("Square root of 16 is", sqrt(16))</i><br/>
+<br/>
+<b>WARNING:</b> In general, avoid using the from..import statement, use the import<br/>
+statement instead. This is because your program will avoid name clashes and will be<br/>
+more readable.<br/>
+<br/>
+<br/>
+<font color="#E91E63"><b>The from...import * Statement</b></font><br/>
+It is also possible to import all names from a module into the current namespace. Here is an example.<br/>
+<br/>
+<i>from math import *<br/>
+print("The value of pi is", pi)</i><br/>
+<br/>
+<b>WARNING:</b>Importing everything with the asterisk (*) symbol is not a good programming practice. This can lead to duplicate definitions for an identifier. It also hampers the readability of our code.<br/>
+<br/>
+<br/>
+<font color="#E91E63"><b>Module Search Path</b></font><br/>
+While importing a module, Python looks at several places. Interpreter first looks for a built-in module then (if not found) into a list of directories defined in sys.path. The search is in this order.<br/>
+<br/>
+- The current directory.<br/>
+- Python then searches each directory in the shell variable PYTHONPATH.<br/>
+- The installation-dependent default directory. On UNIX, this default path is normally /usr/local/lib/python/</html>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

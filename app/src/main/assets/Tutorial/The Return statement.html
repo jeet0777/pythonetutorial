@@ -1,0 +1,46 @@
+<html>
+    <title>return statement</title>
+    
+    
+    <h1>return statement</h1>
+The return statement is used to return from a function i.e. break out of the function. We can optionally return a value from the function as well.<br/>
+<br/>
+<b>Example</b> (save as function_return.py ) :<br/>
+<i>def maximum(x, y):<br/>
+&nbsp;&nbsp;if x > y:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;return x<br/>
+&nbsp;&nbsp;elif x == y:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;return 'The numbers are equal'<br/>
+&nbsp;&nbsp;else:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;return y<br/>
+<br/>
+print(maximum(2, 3))</i><br/>
+<br/>
+<b>Output:</b><br/>
+$ python function_return.py<br/>
+3<br/>
+<br/>
+<b>How It Works</b><br/>
+The maximum function returns the maximum of the parameters, in this case the numbers supplied to the function. It uses a simple if..else statement to find the greater value and then returns that value.<br/>
+<br/>
+Note that a return statement without a value is equivalent to return None . None is a special type in Python that represents nothingness. For example, it is used to indicate that a variable has no value if it has a value of None .<br/>
+<br/>
+Every function implicitly contains a return None statement at the end unless you have written your own return statement. You can see this by running print(some_function()) where the function some_function does not use the return statement such as:<br/>
+<br/>
+<i>def some_function():<br/>
+pass</i><br/>
+<br/>
+The pass statement is used in Python to indicate an empty block of statements. <br/>
+<br/>
+<b>TIP:</b> <i>There is a built-in function called max that already implements the 'find maximum'<br/>
+functionality, so use this built-in function whenever possible.</i></html>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

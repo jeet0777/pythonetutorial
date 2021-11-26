@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="dark">
+        <attr name="backgroundcolor" format="color"/>
+        <attr name="textcolor" format="color"/>
+        <attr name="tintcolor" format="color"/>
+        <attr name="buttoncolor" format="color"/>
+        <attr name="webview_color" format="color"/>
+        <attr name="cardbg" format="color"/>
+        <attr name="cards_comment" format="color"/>
+        <attr name="date_color" format="color"/>
+        <attr name="center_color" format="color"/>
+        <attr name="start_color" format="color"/>
+        <attr name="end_color" format="color"/>
+        <attr name="btn_transparent" format="color"/>
+        <attr name="text_quiz_view" format="color"/>
+        <!--this is  Below for new ui of Tutorial section -->
+        <attr name="list_items_color" format="color"/>
+        <attr name="list_bg" format="color"/>
+        <attr name="list_text" format="color"/>
+    </declare-styleable>
+
+
+</resources>

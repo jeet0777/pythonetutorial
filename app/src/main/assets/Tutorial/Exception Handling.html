@@ -1,0 +1,46 @@
+<html>
+    <title>exception handling</title>
+<h1>Exception Handling</h1>
+We can handle exceptions using the <b>try..except</b> statement. We basically put our usual statements within the try-block and put all our error handlers in the except-block.<br/>
+<br/>
+<b>Example</b> (save as exceptions_handle.py ):<br/><hr>
+<i>try:<br/>
+&nbsp;&nbsp;text = input('Enter something --> ')<br/>
+except EOFError:<br/>
+&nbsp;&nbsp;print('Why did you do an EOF on me?')<br/>
+except KeyboardInterrupt:<br/>
+&nbsp;&nbsp;print('You cancelled the operation.')<br/>
+else:<br/>
+&nbsp;&nbsp;print('You entered {}'.format(text))</i><br/>
+<br/><hr>
+<b>Output:</b><br/>
+# Press ctrl + d<br/>
+$ python exceptions_handle.py<br/>
+Enter something --> Why did you do an EOF on me?<br/>
+# Press ctrl + c<br/>
+$ python exceptions_handle.py<br/>
+Enter something --> ^CYou cancelled the operation.<br/>
+$ python exceptions_handle.py<br/>
+Enter something --> No exceptions<br/>
+You entered No exceptions<br/>
+<br/><hr>
+<b>How It Works</b><br/>
+We put all the statements that might raise exceptions/errors inside the try block and then put handlers for the appropriate errors/exceptions in the except clause/block. The except clause can handle a single specified error or exception, or a parenthesized list of errors/exceptions. If no names of errors or exceptions are supplied, it will handle all errors and exceptions.<br/>
+<br/>
+Note that there has to be at least one except clause associated with every try clause. Otherwise, what's the point of having a try block?<br/>
+<br/>
+If any error or exception is not handled, then the default Python handler is called which just stops the execution of the program and prints an error message. We have already seen this in action above.<br/>
+<br/>
+You can also have an else clause associated with a try..except block. The else clause is executed if no exception occurs.<br/>
+<br/>
+In the next example, we will also see how to get the exception object so that we can retrieve additional information.</html>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

@@ -1,0 +1,43 @@
+<html>
+    
+    <title>operator overloading</title>
+    <h1>Operator overloading</h1>
+Python operators work for built-in classes. But same operator behaves differently with different types. For example, the + operator will, perform arithmetic addition on two numbers, merge two lists and concatenate two strings.<br/>
+<br/>
+This feature in Python, that allows same operator to have different meaning according to the context is called operator overloading.<br/>
+<br/>
+So what happens when we use them with objects of a user-defined class? Let us consider the vector class for 2D array representation, Python will not add them for you directly.<br/>
+<br/>
+But you can define the __add__ method in your class to perform vector addition and then the plus operator will behave as per expectation.<br/>
+<br/>
+class Vector:<br/>
+&nbsp;&nbsp;def __init__(self, a, b):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;self.a = a<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;self.b = b<br/>
+<br/>
+&nbsp;&nbsp;def __str__(self):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;return 'Vector (%d, %d)' % (self.a, self.b)<br/>
+   <br/>
+&nbsp;&nbsp;def __add__(self,other):<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;return Vector(self.a + other.a, self.b + other.b)<br/>
+<br/>
+v1 = Vector(2,10)<br/>
+v2 = Vector(5,-2)<br/>
+<br/>
+print v1 + v2<br/>
+<br/>
+<b>OUTPUT : </b><br/>
+Vector(7,8) <br/>
+<br/>
+What actually happens is that, when you do p1 + p2, Python will call p1.__add__(p2) which in turn is Point.__add__(p1,p2). Similarly, we can overload other operators as well. For eg. Addition, Subtraction, multiplication, power, division, modulo & bitwise operators.<br/>
+<br/>
+Python does not limit operator overloading to arithmetic operators only. We can overload comparison operators as well. For eg. Less than '&lt;', Less than or equal to'&lt;=', Equal to '==' , Not Equal to '!=', Greater than '&gt;', Greater than equal to '&gt;='.</html><script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

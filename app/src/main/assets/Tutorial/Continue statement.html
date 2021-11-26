@@ -1,0 +1,62 @@
+<html>
+
+<title>continue statement</title>
+<h1>Continue Statement</h1>
+The Python Continue statement is used to control the flow of loops i. e to avoid deeply nested conditional code, as well as to optimize a loop by eliminating frequently occurring cases that you want to reject and it might be useful to increase readability of code.<br/>
+Continue statement is useful, when you want to skip the remaining code in the loop and continue iteration.  In that case, the current iteration of the loop will be disrupted when condition  is triggered, but the program will return to the top of the loop. <br/>
+The continue statement will be within the block of code under the loop statement, usually after a conditional if statement.<br/>
+You can use continue statement in a while or for loop.<br/>
+<br/>
+<b>Continue Statement in for Loop</b><br/>
+<br/><hr>
+<i>for var in “python”:<br/>
+&nbsp;&nbsp;&nbsp;if var == “y”:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue<br/>
+&nbsp;&nbsp;&nbsp;print(var)<br/>
+print(“end of loop”)</i><br/>
+<br/><hr>
+<b>Output:</b><br/>
+p<br/>
+t<br/>
+h<br/>
+o <br/>
+n<br/>
+end of loop<br/><hr>
+<br/>
+In this example we are printing letters of word python using for loop. loop iteration is over string python.  In each iteration of loop, we are checking variable var against letter “y”. If var value is  “y”, then it is not executing the rest of the block. So in output all the letters except “y” gets printed.<br/>
+<br/>
+<br/>
+<b>Continue Statement in while Loop</b><br/><hr>
+<i>while True:<br/>
+&nbsp;&nbsp;&nbsp;s = raw_input('Enter something : ')<br/>
+&nbsp;&nbsp;&nbsp;if s == 'quit': <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break <br/>
+&nbsp;&nbsp;&nbsp;if len(s) < 3:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print 'Too small'<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue <br/>
+print 'Input is of sufficient length'</i><br/><hr>
+<b>Output :</b><br/>
+Enter something : a<br/>
+Too small<br/>
+Enter something : 12<br/>
+Too small<br/>
+Enter something : abc<br/>
+Input is of sufficient length<br/>
+Enter something : quit<br/>
+<br/><hr>
+In this program, we accept input from the user, but we process the input string only if it is at least 3 characters long. So, we use the built-in len  function to getthe length and if the length is less than 3, we skip the rest of the statements in the blockby using the continue  statement. Otherwise, the rest of the statements in the loop are executed, doing any kind of processing we want to do here.<br/>
+<br/>
+The difference in using the continue statement rather than a break statement is that our code will continue despite the disruption.
+
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>
+
+</html>

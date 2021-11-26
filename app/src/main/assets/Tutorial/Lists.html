@@ -1,0 +1,137 @@
+<html>
+    <title>list</title>
+<h1>Lists</h1>
+A list is a data structure that holds an ordered collection of items i.e. you can store a sequence of items in a list. This is easy to imagine if you can think of a shopping list where you have a list of items to buy, except that you probably have each item on a separate line in your shopping list whereas in Python you put commas in between them.<br/>
+<br/>
+The list of items should be enclosed in square brackets so that Python understands that you are specifying a list. Once you have created a list, you can add, remove or search for items in the list. Since we can add and remove items, we say that a list is a mutable data type i.e. this type can be altered.<br/>
+<br/>
+<font color="#E91E63"><b>Creating List</b></font><br/>
+Creating a list is as simple as putting different comma-separated values between square brackets.<br/>
+It can have any number of items and they may be of different types (integer, float, string etc.).<br/>
+<br/>
+<i># empty list<br/>
+myList1 = []<br/>
+<br/>
+# list of integers<br/>
+myList1 = [1, 2, 3, 4, 5]<br/>
+<br/>
+# list with mixed datatypes<br/>
+myList1 = [10, "Codelyf", 3.14]</i><br/>
+<br/>
+<font color="#E91E63"><b>Accessing Values in Lists</b></font><br/>
+To access an item in a list, we can use Square Brackets [] along with index. Index starts from 0. So, a list having 5 elements will have index from 0 to 4.<br/>
+<br/>
+<i># This is my shopping list<br/>
+shoplist = ['apple', 'mango', 'carrot', 'banana']<br/>
+print "First Item: ", shoplist[0]<br/>
+print "All Items : ", shoplist[0:4]</i><br/>
+<br/>
+<b>OUTPUT : </b><br/>
+First Item: apple<br/>
+All Items : ['apple', 'mango', 'carrot', 'banana']<br/>
+<br/>
+Python allows <i>negative indexing</i> for its sequences.<br/>
+The index of -1 refers to the last item, -2 to the second last item and so on.<br/>
+<br/>
+<i>print "Last item :" , shoplist[-1];<br/>
+#Output : Last item : banana<br/>
+</i><br/>
+<br/>
+<br/>
+<font color="#E91E63"><b>Updating Lists</b></font><br/>
+List are mutable, meaning, their elements can be changed unlike string or tuple.<br/>
+We can use assignment operator (=) to change an item or a range of items.<br/>
+<br/>
+<i>shoplist = ['apple', 'mango', 'carrot', 'banana']<br/>
+shoplist[2] = 'grapes'<br/>
+print(shoplist)</i><br/>
+<br/>
+<b>OUTPUT : </b><br/>
+['apple', 'mango', 'grapes', 'banana']<br/>
+<br/>
+<font color="#E91E63"><b>Delete List Elements</b></font><br/>
+We can delete one or more items from a list using the keyword del. It can even delete the list entirely.<br/>
+<i>shoplist = ['apple', 'mango', 'carrot', 'banana']<br/>
+del shoplist[2]<br/>
+print(shoplist)<br/>
+del shoplist</i><br/>
+print(shoplist)<br/>
+<br/>
+<b>OUTPUT : </b><br/>
+['apple', 'mango', 'banana']<br/>
+name 'shoplist' is not defined<br/>
+<br/>
+When we don't know index of item, we can use remove() to delete element from list.<br/>
+<i>shoplist = ['apple', 'mango', 'carrot', 'banana']<br/>
+shoplist.remove('mango')<br/>
+print(shoplist)</i><br/>
+<br/>
+<b>OUTPUT : </b><br/>
+['apple', 'carrot', 'banana']<br/>
+<br/>
+<font color="#E91E63"><b>Iterating Through a List</b></font><br/>
+Using a for loop we can iterate though each item in a list.<br/>
+<br/>
+<i>for fruit in ['apple','mango','banana']:<br/>
+&nbsp;&nbsp;print("I like",fruit)</i><br/>
+<br/>
+<b>OUTPUT : </b><br/>
+I like apple<br/>
+I like banana<br/>
+I like mango<br/>
+<br/>
+<font color="#E91E63"><b>Built-in List Functions & Methods</b></font><br/>
+Python includes the following list functions −<br/>
+<br/>
+<b>cmp(list1, list2)</b><br/>
+Compares elements of both lists.<br/>
+<br/>
+<b>len(list)</b><br/>
+Gives the total length of the list.<br/>
+<br/>
+<b>max(list)</b><br/>
+Returns item from the list with max value.<br/>
+<br/>
+<b>min(list)</b><br/>
+Returns item from the list with min value.<br/>
+<br/>
+<b>list(seq)</b><br/>
+Converts a tuple into list.<br/>
+<br/>
+<br/>
+Python includes following list methods<br/>
+<b>list.append(obj)</b><br/>
+Appends object obj to list<br/>
+<br/>
+<b>list.count(obj)</b><br/>
+Returns count of how many times obj occurs in list<br/>
+<br/>
+<b>list.extend(seq)</b><br/>
+Appends the contents of seq to list<br/>
+<br/>
+<b>list.index(obj)</b><br/>
+Returns the lowest index in list that obj appears<br/>
+<br/>
+<b>list.insert(index, obj)</b><br/>
+Inserts object obj into list at offset index<br/>
+<br/>
+<b>list.pop(obj=list[-1])</b><br/>
+Removes and returns last object or obj from list<br/>
+<br/>
+<b>list.remove(obj)</b><br/>
+Removes object obj from list<br/>
+<br/>
+<b>list.reverse()</b><br/>
+Reverses objects of list in place<br/>
+<br/>
+<b>list.sort([func])</b><br/>
+Sorts objects of list, use compare func if given</html><script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>

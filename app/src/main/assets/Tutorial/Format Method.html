@@ -1,0 +1,33 @@
+<html>
+    
+    <title>The format method</title>
+    
+    <h1>format method</h1>
+Sometimes we may want to construct strings from other information. This is where the format() method is useful.<br/>
+<br/>
+<b>Example:</b><br/>
+<i>rate = 5<br/>
+name = 'Codelyf'<br/>
+print('We are learning python in {0} app.'.format(name))<br/>
+print('{0} has {1} star rating'.format(name, rate))</i><br/>
+<br/>
+<b>Output:</b><br/>
+We are learning python in Codelyf app.<br/>
+Codelyf has 5 star rating<br/>
+<br/>
+<b>How It Works</b><br/>
+A string can use certain specifications and subsequently, the format method can be called to substitute those specifications with corresponding arguments to the format method.<br/>
+Observe the first usage where we use {0} and this corresponds to the variable name which is the first argument to the format method. Similarly, the second specification is {1} corresponding to age which is the second argument to the format method. Note that Python starts counting from 0 which means that first position is at index 0, second position is at index 1, and so on.<br/>
+<br/>
+Notice that we could have achieved the same using string concatenation:<br/>
+<i>name + ' has ' + str(rate) + ' star rating'</i><br/>
+<br/>
+but that is much uglier and error-prone. Second, the conversion to string would be done automatically by the format method instead of the explicit conversion to strings needed in this case. Third, when using the format method, we can change the message without having to deal with the variables used and vice-versa.<br/>
+<br/>
+Also note that the numbers are optional, so you could have also written as:<br/>
+<i>rate = 5<br/>
+name = 'Code'<br/>
+print('We are learning python in {0} app.'.format(name))<br/>
+print('{} has {} star rating'.format(name, rate))</i><br/>
+<br/>
+which will give the same exact output as the previous program.</html>

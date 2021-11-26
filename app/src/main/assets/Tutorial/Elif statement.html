@@ -1,0 +1,42 @@
+<html>
+    <title>else if statement</title>
+To handle the situation python allows adding any number of elif clauses after an if and before an else clause. elif clause combines two related if else-if else into one combined if elif else statement. This makes the program easier and reduces the amount of indentation required. <br/>
+<br/>
+<b>Syntax:</b><br/>
+<i>if expression1:<br/>
+&nbsp;&nbsp;Statements<br/>
+elif expression2:<br/>
+&nbsp;&nbsp;Statements<br/>
+elif expression3:<br/>
+&nbsp;&nbsp;Statements<br/>
+else<br/>
+&nbsp;&nbsp;Statements</i><br/>
+<br/>
+There can be zero or more elif clauses and the final else clause is optional. if expression1 is true, it will run body of statements it follows and exit the control statement, if not then it will evaluates the elif clause expression if it is false then program will evaluates the next elif/else statement if present.<br/>
+<br/>
+<b>Example:</b><br/><hr>
+<i>number = 23<br/>
+guess = int(raw_input(“Enter a number”))<br/>
+<br/>
+if guess == number:<br/>
+&nbsp;&nbsp;print “You guessed right”<br/>
+elif guess &lt; number:<br/>
+&nbsp;&nbsp;print “It is higher”<br/>
+else:<br/>
+&nbsp;&nbsp;print “It is smaller” <br/>
+<br/>
+print “Done”</i><br/>
+<br/>
+In this example, we take guesses from user and check with the number we have. We set the variable number to 23. We take user’s input using the raw_input() function for that we print to the screen, the string we supplied as a parameter to it. We then converts the string to integer using int and store it in the variable guess. <br/>
+<br/>
+Now program will starts evaluating if statement , if statement is true i.e if guess and number variable values are equal then it will run the block of statements it follows and prints You guesses right Otherwise it will check for elif clause expression i.e it will check if guess is smaller than number, if it is true then it will run the block of statement it follows and prints It is higher otherwise it will run else block and print It is smaller.<hr></html>
+<script>
+    
+    
+window.onload = () => {
+   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+   bannerNode.parentNode.removeChild(bannerNode);
+}
+
+    
+</script>
